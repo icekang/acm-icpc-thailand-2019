@@ -1,18 +1,23 @@
 import Vue from 'vue'
+import Rules from './view/Rules.vue'
+
 import App from './App.vue'
 import store from './store'
 
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+Vue.use(Vuetify)
+
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
-Vue.use(Vuetify)
+// const routes = [
+//   { path: '/', component: Home}
+// ]
 
 new Vue({
   store,
-  data: {
-    message: 'Hello'
-  },
   render: h => h(App)
 }).$mount('#app')
