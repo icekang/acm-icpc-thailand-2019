@@ -13,11 +13,16 @@ Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
-// const routes = [
-//   { path: '/', component: Home}
-// ]
+const routes = [
+  { path: '/Rules', component: Rules },
+]
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
 
 new Vue({
+  router,
   store,
   render: h => h(App)
 }).$mount('#app')

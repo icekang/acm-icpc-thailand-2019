@@ -1,19 +1,22 @@
 <template>
 <v-app v-scroll="onScroll">
     <v-toolbar :color="colorByScroll" fixed flat>
-      <v-img
-        :src='require("@/assets/logo.png")'
-        height = 90%
-        contain
-        position = left
+      <router-link
+          to = "/"
+          tag="img"
+          :src='require("@/assets/logo.png")'
+          height = 70%
+          contain
+          position = left
+          :style = "{cursor: 'pointer'}"
       >
-      </v-img>
+      </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <!-- <router-link to="/foo">Go to Foo</router-link> -->
-        <v-btn class = "toolbar-item-text" flat>Home</v-btn>
+        <v-btn class = "toolbar-item-text" to = "/" flat>Home</v-btn>
         <v-btn class = "toolbar-item-text" flat>Schedule</v-btn>
-        <v-btn class = "toolbar-item-text" flat>Rules</v-btn>
+        <v-btn class = "toolbar-item-text" to = "/Rules" flat>Rules</v-btn>
         <v-btn class = "toolbar-item-text" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -30,16 +33,15 @@
       <div class="content px-5 mb-2 pt-5">
       </div>
     </div>
-    <Rules></Rules>
-    <!-- <transition name = "slide">
-      <router-view></router-view>
-    </transition> -->
+    <!-- <Rules></Rules> -->
+    <transition name = "slide">
+        <router-view></router-view>
+    </transition>
 </v-app>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld'
-import Rules from './view/Rules'
 export default {
   data: () => ({
     offsetTop: 0,
@@ -65,8 +67,6 @@ export default {
 
   name: 'App',
   components: {
-    // HelloWorld,
-    Rules
   }
 }
 </script>

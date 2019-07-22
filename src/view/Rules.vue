@@ -1,13 +1,13 @@
 <template>
 <div class = "px-5 mx-5 mt-5">
-    <h1 class = "display-3">ACM-ICPC Asia Bangkok Regional Contest 2016 Rules</h1>
+    <h1 class = "display-3">ICPC Regional Rules for 2019 Regionals</h1>
     <p>Adapted for the local site, these rules conform to the official ICPC Regional Rules. (<a href="http://icpc.baylor.edu/regionals/rules" target="_blank">http://icpc.baylor.edu/regionals/rules</a>) and ACM-ICPC 2016 Asia Official Regional Rules (<a href="http://blog.sina.com.cn/s/blog_b946da100102wyh6.html" target="_blank">http://blog.sina.com.cn/s/blog_b946da100102wyh6.html</a>)</p>
     <br>
-    <h2 class = "display-2">Mission</h2>
+    <h2 class = "display-1">Mission</h2>
     <p>The ACM International Collegiate Programming Contest (ICPC) provides college students with opportunities to interact with students from other universities and to sharpen and demonstrate their problem-solving, programming, and teamwork skills. The contest provides a platform for ACM, industry, and academia to encourage and focus public attention on the next generation of computing professionals as they pursue excellence.</p>
     <p>The ACM-ICPC Asia Regional Contests invite Asian students to meet, to establish friendships, and to promote fair competition in programming and in application use of algorithms and theory.</p>
     <br>
-    <h2 class = "display-2">Team Composition</h2>
+    <h2 class = "display-1">Team Composition</h2>
     <p>A representative of the sponsoring institution of higher education, typically a faculty member, must serve as or designate the team coach. The coach certifies the eligibility of contestants and serves as the official point-of-contact with the team prior to and during contest activities. A team may only have one coach and the coach cannot also be a contestant.</p>
     <p>The coach must fully register teams in the ICPC Registration System within the time set by the regional rules which, for all Regional Contests, is no later than October 23. A team is not eligible to compete in the regional contest until the regional contest director has accepted the team in the web registration system. Teams failing to comply with any of these requirements will be ruled ineligible to compete.</p>
     <p>Each team consists of three contestants who are eligible to compete in the ICPC World Finals as described under Advancing to the World Finals in the ICPC Regional Rules. The team's contestants must satisfy the following eligibility rules.</p>
@@ -29,7 +29,7 @@
     </ul>
     <br>
     <br>
-    <h2 class = "display-2">Conduct of the contest</h2>
+    <h2 class = "display-1">Conduct of the contest</h2>
     <br>
     <h3 class = "headline">Pre-Contest</h3>
     <ol>
@@ -65,7 +65,7 @@
         <li>The official contest result and ranking will be announced after the contest in the closing ceremony.</li>
     </ol>
     <br>
-    <h2 class = "display-2">Scoring and Ranking</h2>
+    <h2 class = "display-1">Scoring and Ranking</h2>
     <ol>
         <li>A problem is solved when it is accepted by the judges. The judges are solely responsible for accepting or rejecting submitted runs.</li>
         <li>The total time of a team is the sum of the time consumed for each problem solved. The time consumed for a solved problem is the time elapsed from the beginning of the contest to the submittal of the accepted run plus 20 penalty minutes for every rejected run for that problem regardless of submittal time. There is no time consumed for a problem that is not solved.</li>
