@@ -88,8 +88,6 @@
             <p>There may be multiple test cases for some problems. For such problems, the test cases will be judged sequentially. The runs is accepted if it is accepted by all test cases. The first rejection will be the run result, regardless of the result of other test cases. For example, Problem A has 4 test cases. Your submission got Wrong Answer on 2nd test case, and Runtime Error on 3rd test case. In this case, the judge response will be Wrong Answer.</p>
         </li>
     </ol>
-
-
 </div>
 </template>
 

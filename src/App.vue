@@ -33,15 +33,13 @@
       <div class="content px-5 mb-2 pt-5">
       </div>
     </div>
-    <!-- <Rules></Rules> -->
-    <transition name = "slide">
-        <router-view></router-view>
+    <transition name = "fade" mode = "out-in" duration = '400'>
+      <router-view :key="$route.fullPath"></router-view>
     </transition>
 </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
 export default {
   data: () => ({
     offsetTop: 0,
@@ -73,7 +71,8 @@ export default {
 
 <style lang="less" scoped>
 #main {
-  background-color: #e2e68d;
+  background-image: linear-gradient(#2C5E92 0%, #552F6D 80%);
+  // background-color: #e2e68d;
 }
 .content {
   color: white;
@@ -88,5 +87,11 @@ h1 {
 h2 {
   color: white;
   font-size: 30px;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
