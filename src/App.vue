@@ -1,26 +1,24 @@
 <template>
-<v-app v-scroll="onScroll">
+  <v-app v-scroll="onScroll">
     <v-toolbar :color="colorByScroll" fixed flat>
       <router-link
-          to = "/"
-          tag="img"
-          :src='require("@/assets/logo.png")'
-          height = 70%
-          contain
-          position = left
-          :style = "{cursor: 'pointer'}"
-      >
-      </router-link>
+        to="/"
+        tag="img"
+        height="70%"
+        contain
+        position="left"
+        :style="{cursor: 'pointer'}"
+      ></router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <!-- <router-link to="/foo">Go to Foo</router-link> -->
-        <v-btn class = "toolbar-item-text" to = "/" flat>Home</v-btn>
-        <v-btn class = "toolbar-item-text" flat>Schedule</v-btn>
-        <v-btn class = "toolbar-item-text" to = "/Rules" flat>Rules</v-btn>
-        <v-btn class = "toolbar-item-text" flat>Hosts</v-btn>
+        <v-btn class="toolbar-item-text" to="/" flat>Home</v-btn>
+        <v-btn class="toolbar-item-text" flat>Schedule</v-btn>
+        <v-btn class="toolbar-item-text" to="/Rules" flat>Rules</v-btn>
+        <v-btn class="toolbar-item-text" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <div id = "main">
+    <div id="main">
       <div class="px-5 mt-5 pt-5">
         <h1>Go Premium. Be happy.</h1>
       </div>
@@ -28,24 +26,15 @@
         <h2>Premium sounds amazing. Listen to it offline and with no ad interruptions.</h2>
       </div>
       <div class="text-xs mt-5 pt-5 px-5">
-        <v-btn large round depressed color="pink" dark id = "register_btn">Register</v-btn>
+        <v-btn large round depressed color="pink" dark id="register_btn" ref="register_btn">Register</v-btn>
       </div>
-      <div class="content px-5 mb-2 pt-5">
-      </div>
+      <div class="content px-5 mb-2 pt-5"></div>
     </div>
-    <transition name = "fade" mode = "out-in" duration = '400'>
+    <transition name="fade" mode="out-in" duration="400">
       <router-view :key="$route.fullPath"></router-view>
     </transition>
-    <transition name = "slide-fade">
-      <v-btn
-        fixed
-        dark
-        fab
-        bottom
-        right
-        large
-        color = "pink"
-        v-if = "show">
+    <transition name="slide-fade">
+      <v-btn fixed dark fab bottom right large color="pink" v-if="show_float_btn">
         <v-icon>edit</v-icon>
       </v-btn>
     </transition>
@@ -60,60 +49,70 @@
     >
       <v-icon>assignment</v-icon>
       <i>Register</i>
-    </v-btn> -->
-</v-app>
+    </v-btn>-->
+  </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
-    offsetTop: 0
+    offsetTop: 0,
+    show_float_btn: false
   }),
   computed: {
     colorByScroll: function() {
-      return "rgba(0,0,0," + this.transparency() + ")"
+      return "rgba(0,0,0," + this.transparency() + ")";
     },
-    show: function () {
-      console.log("div")
+    show: function() {
+      console.log("div");
       var div = document.getElementById("register_btn");
-      if ( div ) {
+      if (div) {
         var rect = div.getBoundingClientRect();
-        console.log("Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px");
-        return rect.bottom <= 0
+        console.log(
+          "Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px"
+        );
+        return rect.bottom <= 0;
       }
-      return false
+      return false;
     }
   },
   methods: {
-    transparency: function () {
+    transparency: function() {
       if (this.offsetTop > 7) {
-        return 0.7
-      }
-      else {
-        return this.offsetTop/10
+        return 0.7;
+      } else {
+        return this.offsetTop / 10;
       }
     },
-    onScroll (e) {
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
-    },
+    onScroll(e) {
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
+      var div = this.$refs.register_btn.$el;
+      if (div) {
+        var rect = div.getBoundingClientRect();
+        console.log(
+          "Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px"
+        );
+        return (this.show_float_btn = rect.bottom <= 0);
+      }
+      return (this.show_float_btn = false);
+    }
   },
 
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+  components: {}
+};
 </script>
 
 <style lang="less" scoped>
 #main {
-  background-image: linear-gradient(#2C5E92 0%, #552F6D 80%);
+  background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);
   // background-color: #e2e68d;
 }
 .content {
   color: white;
 }
 .toolbar-item-text {
-  color: white!important;
+  color: white !important;
 }
 h1 {
   color: white;
@@ -123,17 +122,18 @@ h2 {
   color: white;
   font-size: 30px;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
