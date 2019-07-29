@@ -28,7 +28,7 @@
         <h2>Premium sounds amazing. Listen to it offline and with no ad interruptions.</h2>
       </div>
       <div class="text-xs mt-5 pt-5 px-5">
-        <v-btn large round depressed color="pink" dark>Register</v-btn>
+        <v-btn large round depressed color="pink" dark id = "register_btn">Register</v-btn>
       </div>
       <div class="content px-5 mb-2 pt-5">
       </div>
@@ -36,17 +36,38 @@
     <transition name = "fade" mode = "out-in" duration = '400'>
       <router-view :key="$route.fullPath"></router-view>
     </transition>
+    <v-btn
+      fixed
+      dark
+      fab
+      bottom
+      right
+      color = "pink"
+      v-if = "show"
+    >
+      <v-icon>assignment</v-icon>
+    </v-btn>
 </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
-    offsetTop: 0,
+    offsetTop: 0
   }),
   computed: {
     colorByScroll: function() {
       return "rgba(0,0,0," + this.transparency() + ")"
+    },
+    show: function () {
+      console.log("div")
+      var div = document.getElementById("register_btn");
+      if ( div ) {
+        var rect = div.getBoundingClientRect();
+        console.log("Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px");
+        return rect.bottom <= 0
+      }
+      return false
     }
   },
   methods: {
@@ -60,7 +81,7 @@ export default {
     },
     onScroll (e) {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
-    }
+    },
   },
 
   name: 'App',
