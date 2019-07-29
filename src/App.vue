@@ -36,7 +36,20 @@
     <transition name = "fade" mode = "out-in" duration = '400'>
       <router-view :key="$route.fullPath"></router-view>
     </transition>
-    <v-btn
+    <transition name = "slide-fade">
+      <v-btn
+        fixed
+        dark
+        fab
+        bottom
+        right
+        large
+        color = "pink"
+        v-if = "show">
+        <v-icon>edit</v-icon>
+      </v-btn>
+    </transition>
+    <!-- <v-btn
       fixed
       dark
       fab
@@ -46,7 +59,8 @@
       v-if = "show"
     >
       <v-icon>assignment</v-icon>
-    </v-btn>
+      <i>Register</i>
+    </v-btn> -->
 </v-app>
 </template>
 
@@ -113,6 +127,17 @@ h2 {
   transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
   opacity: 0;
 }
 </style>
