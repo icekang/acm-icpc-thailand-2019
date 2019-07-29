@@ -38,18 +38,6 @@
         <v-icon>edit</v-icon>
       </v-btn>
     </transition>
-    <!-- <v-btn
-      fixed
-      dark
-      fab
-      bottom
-      right
-      color = "pink"
-      v-if = "show"
-    >
-      <v-icon>assignment</v-icon>
-      <i>Register</i>
-    </v-btn>-->
   </v-app>
 </template>
 
@@ -63,18 +51,6 @@ export default {
     colorByScroll: function() {
       return "rgba(0,0,0," + this.transparency() + ")";
     },
-    show: function() {
-      console.log("div");
-      var div = document.getElementById("register_btn");
-      if (div) {
-        var rect = div.getBoundingClientRect();
-        console.log(
-          "Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px"
-        );
-        return rect.bottom <= 0;
-      }
-      return false;
-    }
   },
   methods: {
     transparency: function() {
@@ -89,9 +65,6 @@ export default {
       var div = this.$refs.register_btn.$el;
       if (div) {
         var rect = div.getBoundingClientRect();
-        console.log(
-          "Coordinates: " + this.offsetTop + "px, " + rect.bottom + "px"
-        );
         return (this.show_float_btn = rect.bottom <= 0);
       }
       return (this.show_float_btn = false);
@@ -106,7 +79,6 @@ export default {
 <style lang="less" scoped>
 #main {
   background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);
-  // background-color: #e2e68d;
 }
 .content {
   color: white;
