@@ -7,15 +7,15 @@
         height="70%"
         contain
         position="left"
+        :src="logoByScroll"
         :style="{cursor: 'pointer'}"
       ></router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <!-- <router-link to="/foo">Go to Foo</router-link> -->
-        <v-btn class="toolbar-item-text" to="/" flat>Home</v-btn>
-        <v-btn class="toolbar-item-text" flat>Schedule</v-btn>
-        <v-btn class="toolbar-item-text" to="/Rules" flat>Rules</v-btn>
-        <v-btn class="toolbar-item-text" flat>Hosts</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/" flat>Home</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" flat>Schedule</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/Rules" flat>Rules</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <div id="main">
@@ -42,15 +42,25 @@
 </template>
 
 <script>
+const logo_black = require("@/assets/logo-black.png")
+const logo_white = require("@/assets/logo.png")
 export default {
   data: () => ({
     offsetTop: 0,
-    show_float_btn: false
+    show_float_btn: false,
+    logo_black: logo_black,
+    logo_white: logo_white
   }),
   computed: {
-    colorByScroll: function() {
+    logoByScroll: function() {
+      return this.offsetTop == 0 ? this.logo_black : this.logo_white
+    },
+    colorByScroll: function() { 
       return "rgba(0,0,0," + this.transparency() + ")";
     },
+    colorToolbarTextByScroll: function() {
+      return this.offsetTop == 0 ? "black" : "white"
+    }
   },
   methods: {
     transparency: function() {
