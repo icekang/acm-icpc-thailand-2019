@@ -18,23 +18,26 @@
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <div id="main">
-      <div class="px-5 mt-5 pt-5">
-        <h1>Go Premium. Be happy.</h1>
+    <v-parallax :src='require("@/assets/red-castle.jpg")' height=450>
+      <div id="main">
+        <div class="px-5 mt-5 pt-5">
+          <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
+        </div>
+        <div class="px-5 mt-2">
+          <h2 class="text-shadow text-body">Hosted by Faculty of Engineering</h2>
+          <h2 class="text-shadow text-body">Chulalongkorn University</h2>
+        </div>
+        <div class="text-xs pt-5 px-5">
+          <v-btn large round depressed color="#6b0000" dark id="register_btn" ref="register_btn">Register</v-btn>
+        </div>
+        <div class="content px-5 mb-2 pt-5"></div>
       </div>
-      <div class="px-5 mt-2">
-        <h2>Premium sounds amazing. Listen to it offline and with no ad interruptions.</h2>
-      </div>
-      <div class="text-xs mt-5 pt-5 px-5">
-        <v-btn large round depressed color="pink" dark id="register_btn" ref="register_btn">Register</v-btn>
-      </div>
-      <div class="content px-5 mb-2 pt-5"></div>
-    </div>
+    </v-parallax>
     <transition name="fade" mode="out-in" duration="400">
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <v-btn fixed dark fab bottom right large color="pink" v-if="show_float_btn">
+      <v-btn fixed dark fab bottom right large color="#6b0000" v-if="show_float_btn">
         <v-icon>edit</v-icon>
       </v-btn>
     </transition>
@@ -55,7 +58,7 @@ export default {
     logoByScroll: function() {
       return this.offsetTop == 0 ? this.logo_black : this.logo_white
     },
-    colorByScroll: function() { 
+    colorByScroll: function() {
       return "rgba(0,0,0," + this.transparency() + ")";
     },
     colorToolbarTextByScroll: function() {
@@ -87,8 +90,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#main {
-  background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);
+.text-shadow {
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+}
+.text-title {
+  font-size: 6vw;
+}
+.text-body {
+  font-size: 2vw;
 }
 .content {
   color: white;
