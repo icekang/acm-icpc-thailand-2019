@@ -35,24 +35,26 @@
     </div>
     <div id="content-chula-eng">
       <div class="container">
-        <div align="right" style="width: 100%">
-            <h1
-                style="font-size: 5em; color: #6b0000; font-family: Playfair Display, Times, serif;"
-            >
-                About Host
-            </h1>
-            <v-flex>
-                <p style="font-size: 18px;">
-                Department of Computer Engineering, Faculty of Engineering,
-                Chulalongkorn University is the first computer school in Thailand. The
-                origin came from the Computer Science Unit of Graduate School which
-                was the computer services unit inside Chulalongkorn University, and
-                also educating computer science in the level of certificate and master
-                degree. Later, the Computer Science Unit was transformed into the
-                Department of Computer Engineering.
-                </p>
-            </v-flex>
-            <div  align='right' style='width: 100%'>
+        <div>
+            <div align="right" style="width: 100%">
+                <h1
+                    style="font-size: 5em; color: #6b0000; font-family: Playfair Display, Times, serif;"
+                >
+                    About Host
+                </h1>
+                <v-flex>
+                    <p style="font-size: 18px;">
+                    Department of Computer Engineering, Faculty of Engineering,
+                    Chulalongkorn University is the first computer school in Thailand. The
+                    origin came from the Computer Science Unit of Graduate School which
+                    was the computer services unit inside Chulalongkorn University, and
+                    also educating computer science in the level of certificate and master
+                    degree. Later, the Computer Science Unit was transformed into the
+                    Department of Computer Engineering.
+                    </p>
+                </v-flex>
+            </div>
+            <div align="right" style='width: 100%;'>
                 <v-btn
                     href="https://www.eng.chula.ac.th/en/"
                     target="_blank"
