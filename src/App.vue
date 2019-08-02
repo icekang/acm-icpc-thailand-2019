@@ -18,7 +18,7 @@
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-parallax :src='require("@/assets/red-castle.jpg")' height=450 style="padding: 0 !important;">
+    <v-parallax :src="red_castle" height=450 style="padding: 0 !important;">
       <div id="main" style="position: absolute; z-index: 6;">
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
@@ -48,12 +48,14 @@
 <script>
 const logo_black = require("@/assets/logo-black.png")
 const logo_white = require("@/assets/logo.png")
+const red_castle = require("@/assets/red-castle.jpg")
 export default {
   data: () => ({
     offsetTop: 0,
     show_float_btn: false,
     logo_black: logo_black,
-    logo_white: logo_white
+    logo_white: logo_white,
+    red_castle: red_castle
   }),
   computed: {
     logoByScroll: function() {
@@ -90,8 +92,8 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-.v-parallax content {
+<style>
+.v-parallax__content {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
@@ -116,14 +118,6 @@ export default {
 }
 .toolbar-item-text {
   color: white !important;
-}
-h1 {
-  color: white;
-  font-size: 5em;
-}
-h2 {
-  color: white;
-  font-size: 3em;
 }
 .fade-enter-active,
 .fade-leave-active {
