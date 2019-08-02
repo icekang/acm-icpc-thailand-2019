@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="content-icpc" class="container py-5 my-5">
+    <div id="content-icpc" class="container pt-5 mt-5">
       <h1
         style="font-size: 5em; color: #6b0000; font-family: Playfair Display, Times, serif;"
       >
@@ -27,6 +27,11 @@
                 More
             </v-btn>
         </div>
+        <div class="py-5">
+            <svg width="45%" height="1.2vh">
+                <rect width="100%" height="100%" style="fill:#6b0000;stroke-width:0;stroke:rgb(0,0,0)" />
+            </svg>
+        </div>
     </div>
     <div id="content-chula-eng">
       <div class="container">
@@ -36,7 +41,7 @@
             >
                 About Host
             </h1>
-            <v-flex md8>
+            <v-flex>
                 <p style="font-size: 18px;">
                 Department of Computer Engineering, Faculty of Engineering,
                 Chulalongkorn University is the first computer school in Thailand. The
@@ -47,6 +52,18 @@
                 Department of Computer Engineering.
                 </p>
             </v-flex>
+            <div  align='right' style='width: 100%'>
+                <v-btn
+                    href="https://www.eng.chula.ac.th/en/"
+                    target="_blank"
+                    depressed
+                    color="#6b0000"
+                    right
+                    dark
+                >
+                    More
+                </v-btn>
+            </div>
         </div>
         <div class="pt-5" id="content-cu-eng">
           <img
