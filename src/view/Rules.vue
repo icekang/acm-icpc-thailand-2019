@@ -1,8 +1,8 @@
 <template>
 <div class = "px-5 mx-5 mt-5">
-    <h1 class = "display-3">ICPC Regional Rules for 2019 Regionals</h1>
+    <h1>ICPC Regional Rules for 2019 Regionals</h1>
     <p>Adapted for the local site, these rules conform to the official ICPC Regional Rules. (<a href="http://icpc.baylor.edu/regionals/rules" target="_blank">http://icpc.baylor.edu/regionals/rules</a>) and ACM-ICPC 2016 Asia Official Regional Rules (<a href="http://blog.sina.com.cn/s/blog_b946da100102wyh6.html" target="_blank">http://blog.sina.com.cn/s/blog_b946da100102wyh6.html</a>)</p>
-    <br>
+    <br><br>
     <h2 class = "display-1">Mission</h2>
     <p>The ACM International Collegiate Programming Contest (ICPC) provides college students with opportunities to interact with students from other universities and to sharpen and demonstrate their problem-solving, programming, and teamwork skills. The contest provides a platform for ACM, industry, and academia to encourage and focus public attention on the next generation of computing professionals as they pursue excellence.</p>
     <p>The ACM-ICPC Asia Regional Contests invite Asian students to meet, to establish friendships, and to promote fair competition in programming and in application use of algorithms and theory.</p>
@@ -21,16 +21,16 @@
         <li>A student who has competed in Regional Contests for five years is NOT eligible to compete.</li>
         <li>A student may compete in at most two Asia Site Contests, home or not-home administrative sub-region.</li>
     </ul>
-    <br>
+    <br><br>
     <h3 class = "headline">Period of Eligibility</h3>
     <ul>
         <li>A student who meets the Basic Requirements and FIRST began post-secondary studies in 2012 or later is eligible to compete.</li>
         <li>A student who meets the Basic Requirements and was born in 1993 or later is eligible to compete.</li>
     </ul>
-    <br>
-    <br>
+    <br><br>
+    <br><br>
     <h2 class = "display-1">Conduct of the contest</h2>
-    <br>
+    <br><br>
     <h3 class = "headline">Pre-Contest</h3>
     <ol>
         <li>A calculator and any electronic devices or storages (e.g. mobile phone, CD, DVD, USB flash drive, MP3 player, iPod, iPad, electronic dictionary, etc) are NOT permitted. However, each contestant is allowed to bring one paper dictionary and some personal and stationery items (pen, pencil, ruler, dice, etc) into a contest room. Blank papers will be provided at each workstation.</li>
@@ -43,7 +43,7 @@
         <li>All teams will use the same equipment and software environment as provided by the organizer. No substitution of keyboards or other hardware will be allowed for the competition. The provided keyboard has a standard QWERTY keyboard layout. We suggest that the contestants acquire a similar keyboard for practice.</li>
         <li>All contestants must wear the contestant T-Shirt and the ID badge (provided on-site) throughout the contest. Only 3 contestants per team are allowed to get into the contest room.</li>
     </ol>
-    <br>
+    <br><br>
     <h3 class = "headline">In-Contest</h3>
     <ol>
         <li>At least 10 problems will be posed. So far as possible, problems avoid dependence on detailed knowledge of a particular applications area or particular contest language. Of these problems at least two will be solvable by a second-year computer science student and the rest will determine the winner.</li>
@@ -57,14 +57,14 @@
         <li>While the contest is scheduled for a particular time length (5 hours), the judges have the authority to alter the length of the contest in the event of unforeseen difficulties. Should the contest duration be altered, every attempt will be made to notify contestants in a timely and uniform manner.</li>
         <li>With the help of volunteers, the contestants can have a printout of their program listings for debugging purposes. Each team has printing quota of 30 pages.</li>
     </ol>
-    <br>
+    <br><br>
     <h3 class = "headline">Post-Contest</h3>
     <ol>
         <li>Any complaints about the contest must be made to the Contest Committee and Judges within 30 minutes after the contest. After the result has been announced, further complaints must be made according to the Regional Rules (<a href="http://icpc.baylor.edu/regionals/rules" target="_blank">http://icpc.baylor.edu/regionals/rules</a>)</li>
         <li>In consultation with the judges, the Contest Director determines the winners of the contest. The contest director and judges are empowered to adjust for or adjudicate unforeseen events and conditions. Their decisions are final.</li>
         <li>The official contest result and ranking will be announced after the contest in the closing ceremony.</li>
     </ol>
-    <br>
+    <br><br>
     <h2 class = "display-1">Scoring and Ranking</h2>
     <ol>
         <li>A problem is solved when it is accepted by the judges. The judges are solely responsible for accepting or rejecting submitted runs.</li>
@@ -98,4 +98,18 @@ export default {
 </script>
 
 <style>
+h1 {
+    font-size: 5rem;
+    color: #6b0000;
+    font-family: Playfair Display, Times, serif;
+}
+p {
+    font-size: 1.3rem;
+}
+li {
+    font-size: 1.2rem;
+}
+.display-1 {
+    color: #6b0000;
+}
 </style>
