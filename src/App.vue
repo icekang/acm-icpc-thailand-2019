@@ -18,8 +18,8 @@
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-parallax :src='require("@/assets/red-castle.jpg")' height=450>
-      <div id="main">
+    <v-parallax :src='require("@/assets/red-castle.jpg")' height=450 style="padding: 0 !important;">
+      <div id="main" style="position: absolute; z-index: 6;">
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
         </div>
@@ -32,6 +32,7 @@
         </div>
         <div class="content px-5 mb-2 pt-5"></div>
       </div>
+      <div class="shadow" style="z-index: 5;"></div>
     </v-parallax>
     <transition name="fade" mode="out-in" duration="400">
       <router-view :key="$route.fullPath"></router-view>
@@ -90,6 +91,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.v-parallax content {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.shadow {
+  z-index: 5;
+  background-image: linear-gradient(to bottom, transparent 75%, #000000);
+  height: 100%;
+  widows: 100%;
+}
 .text-shadow {
   text-shadow: 2px 2px 4px #000000;
   color: white;
@@ -108,11 +119,11 @@ export default {
 }
 h1 {
   color: white;
-  font-size: 80px;
+  font-size: 5em;
 }
 h2 {
   color: white;
-  font-size: 30px;
+  font-size: 3em;
 }
 .fade-enter-active,
 .fade-leave-active {
