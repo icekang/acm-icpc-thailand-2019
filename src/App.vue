@@ -8,7 +8,7 @@
         contain
         position="left"
         :src="logoByScroll"
-        :style="{cursor: 'pointer'}"
+        :style="{ cursor: 'pointer' }"
       ></router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
@@ -18,17 +18,21 @@
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-parallax :src="red_castle" height=450 style="padding: 0 !important;">
+    <v-parallax :src="red_castle" height="450" style="padding: 0 !important;">
       <div id="main" style="position: absolute; z-index: 6;">
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
         </div>
         <div class="px-5 mt-2">
-          <h2 class="text-shadow text-body">Hosted by Faculty of Engineering</h2>
+          <h2 class="text-shadow text-body">
+            Hosted by Faculty of Engineering
+          </h2>
           <h2 class="text-shadow text-body">Chulalongkorn University</h2>
         </div>
         <div class="text-xs pt-5 px-5">
-          <v-btn large round depressed color="#6b0000" dark id="register_btn" ref="register_btn">Register</v-btn>
+          <v-btn large round depressed color="#6b0000" dark id="register_btn" ref="register_btn">
+            Register
+          </v-btn>
         </div>
         <div class="content px-5 mb-2 pt-5"></div>
       </div>
@@ -46,9 +50,9 @@
 </template>
 
 <script>
-const logo_black = require("@/assets/logo-black.png")
-const logo_white = require("@/assets/logo.png")
-const red_castle = require("@/assets/red-castle.jpg")
+const logo_black = require('@/assets/logo-black.png')
+const logo_white = require('@/assets/logo.png')
+const red_castle = require('@/assets/red-castle.jpg')
 export default {
   data: () => ({
     offsetTop: 0,
@@ -62,34 +66,34 @@ export default {
       return this.offsetTop == 0 ? this.logo_black : this.logo_white
     },
     colorByScroll: function() {
-      return "rgba(0,0,0," + this.transparency() + ")";
+      return 'rgba(0,0,0,' + this.transparency() + ')'
     },
     colorToolbarTextByScroll: function() {
-      return this.offsetTop == 0 ? "black" : "white"
+      return this.offsetTop == 0 ? 'black' : 'white'
     }
   },
   methods: {
     transparency: function() {
       if (this.offsetTop > 7) {
-        return 0.7;
+        return 0.7
       } else {
-        return this.offsetTop / 10;
+        return this.offsetTop / 10
       }
     },
     onScroll(e) {
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
-      var div = this.$refs.register_btn.$el;
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+      var div = this.$refs.register_btn.$el
       if (div) {
-        var rect = div.getBoundingClientRect();
-        return (this.show_float_btn = rect.bottom <= 0);
+        var rect = div.getBoundingClientRect()
+        return (this.show_float_btn = rect.bottom <= 0)
       }
-      return (this.show_float_btn = false);
+      return (this.show_float_btn = false)
     }
   },
 
-  name: "App",
+  name: 'App',
   components: {}
-};
+}
 </script>
 
 <style>
