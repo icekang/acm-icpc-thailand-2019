@@ -13,7 +13,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn :color="colorToolbarTextByScroll" to="/" flat>Home</v-btn>
-        <v-btn :color="colorToolbarTextByScroll" flat>Schedule</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/Contest" flat>Contest</v-btn>
         <v-btn :color="colorToolbarTextByScroll" to="/Rules" flat>Rules</v-btn>
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>

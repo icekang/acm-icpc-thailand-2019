@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Rules from './view/Rules.vue'
 import Home from './view/Home.vue'
+import Contest from './view/Contest.vue'
 
 import App from './App.vue'
 import store from './store'
@@ -17,6 +18,7 @@ Vue.config.productionTip = false
 const routes = [
   { path: '/', component: Home },
   { path: '/Rules', component: Rules },
+  { path: '/Contest', component: Contest }
 ]
 
 const router = new VueRouter({
