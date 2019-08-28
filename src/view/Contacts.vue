@@ -1,7 +1,6 @@
 <template>
   <div class="px-5 mx-5 my-5">
     <h1>Hosts</h1>
-    <!-- 13.7396974,100.5308618,15.9z -->
     <gmap-map ref="mymap" :center="startLocation" :zoom="17" style="width: 100%; height: 300px">
       <gmap-info-window
         :options="infoOptions"
@@ -19,7 +18,7 @@
         @click="toggleInfo(item, key)"
       />
     </gmap-map>
-    <h2 class="display-1">Chulalongkorn University</h2>
+    <h2 class="display-1 pt-2">Faculty of Engineering, Chulalongkorn University</h2>
     <p>Athasit Surarerks<br />athasit@cp.eng.chula.ac.th<br />02-218-6957</p>
   </div>
 </template>
