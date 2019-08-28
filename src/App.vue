@@ -31,12 +31,12 @@
             Start: 19 Oct 2019
           </h2>
         </div>
-        <div class="px-5 mt-2">
+        <!-- <div class="px-5 mt-2">
           <h2 class="text-shadow text-body">
             Hosted by Faculty of Engineering
           </h2>
           <h2 class="text-shadow text-body">Chulalongkorn University</h2>
-        </div>
+        </div> -->
         <div class="text-xs pt-5 px-5">
           <v-btn
             large
@@ -70,7 +70,7 @@
         v-if="show_float_btn"
         href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
       >
-        <v-icon>edit</v-icon>
+        <v-icon>assignment</v-icon>
       </v-btn>
     </transition>
   </v-app>
@@ -138,11 +138,25 @@ export default {
   text-shadow: 2px 2px 4px #000000;
   color: white;
 }
-.text-title {
-  font-size: 6vw;
+@media screen and (min-width: 651px) {
+  .text-title {
+    font-size: 80px;
+  }
 }
-.text-body {
-  font-size: 2vw;
+@media screen and (max-width: 650px) {
+  .text-title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 651px) {
+  .text-body {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .text-body {
+    font-size: 22px;
+  }
 }
 .content {
   color: white;
