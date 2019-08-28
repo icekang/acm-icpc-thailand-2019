@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mx-5 mt-5">
+  <div class="px-5 mx-5 my-5">
     <h1>Hosts</h1>
     <h2 class="display-1">Chulalongkorn University</h2>
     <p>Athasit Surarerks<br />athasit@cp.eng.chula.ac.th<br />02-218-6957</p>
