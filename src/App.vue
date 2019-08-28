@@ -38,7 +38,16 @@
           <h2 class="text-shadow text-body">Chulalongkorn University</h2>
         </div>
         <div class="text-xs pt-5 px-5">
-          <v-btn large round depressed color="#6b0000" dark id="register_btn" ref="register_btn">
+          <v-btn
+            large
+            round
+            depressed
+            color="#6b0000"
+            dark
+            id="register_btn"
+            ref="register_btn"
+            href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+          >
             Register
           </v-btn>
         </div>
@@ -50,7 +59,17 @@
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <v-btn fixed dark fab bottom right large color="#6b0000" v-if="show_float_btn">
+      <v-btn
+        fixed
+        dark
+        fab
+        bottom
+        right
+        large
+        color="#6b0000"
+        v-if="show_float_btn"
+        href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+      >
         <v-icon>edit</v-icon>
       </v-btn>
     </transition>
