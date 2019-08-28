@@ -18,7 +18,7 @@
         <v-btn :color="colorToolbarTextByScroll" flat>Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-parallax :src="red_castle" height="450" style="padding: 0 !important;">
+    <v-parallax :src="red_castle" height="550" style="padding: 0 !important;">
       <div id="main" style="position: absolute; z-index: 6;">
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
@@ -28,6 +28,14 @@
             Hosted by Faculty of Engineering
           </h2>
           <h2 class="text-shadow text-body">Chulalongkorn University</h2>
+        </div>
+        <div class="px-5 mt-3">
+          <h2 class="text-shadow text-body">
+            Register: 26 Aug - 20 Sep 2019
+          </h2>
+          <h2 class="text-shadow text-body">
+            Start: 19 Oct 2019
+          </h2>
         </div>
         <div class="text-xs pt-5 px-5">
           <v-btn large round depressed color="#6b0000" dark id="register_btn" ref="register_btn">
