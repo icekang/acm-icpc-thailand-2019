@@ -14,6 +14,15 @@ Vue.use(Vuetify)
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyB9id485Gn1Ounw7JWk-WfczIcbqnX1eNA',
+    libraries: 'places' // This is required if you use the Autocomplete plugin
+  }
+})
+
 Vue.config.productionTip = false
 
 const routes = [
