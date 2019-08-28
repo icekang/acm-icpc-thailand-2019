@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mx-5 mt-5">
+  <div class="px-5 mx-5 my-5">
     <h1>Contest Information</h1>
     <h2 class="display-1">Time</h2>
     <p>19 October 2019</p>

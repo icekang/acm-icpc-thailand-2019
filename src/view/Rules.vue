@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mx-5 mt-5">
+  <div class="px-5 mx-5 my-5">
     <h1>ICPC Regional Rules for 2019 Regionals</h1>
     <p>
       Adapted for the local site, these rules conform to the official ICPC Regional Rules. (<a
