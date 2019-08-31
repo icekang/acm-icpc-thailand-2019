@@ -88,26 +88,26 @@
 </template>
 
 <script>
-const logo_black = require('@/assets/logo-black.png')
+const logo_color = require('@/assets/logo-color.png')
 const logo_white = require('@/assets/logo.png')
-const red_castle = require('@/assets/red-castle.jpg')
+const red_castle = require('@/assets/red-castle-blur.jpg')
 export default {
   data: () => ({
     offsetTop: 0,
     show_float_btn: false,
-    logo_black: logo_black,
+    logo_color: logo_color,
     logo_white: logo_white,
     red_castle: red_castle
   }),
   computed: {
     logoByScroll: function() {
-      return this.offsetTop == 0 ? this.logo_black : this.logo_white
+      return this.offsetTop == 0 ? this.logo_color : this.logo_white
     },
     colorByScroll: function() {
       return 'rgba(0,0,0,' + this.transparency() + ')'
     },
     colorToolbarTextByScroll: function() {
-      return this.offsetTop == 0 ? 'black' : 'white'
+      return this.offsetTop == 0 ? '#6b0000' : 'white'
     }
   },
   methods: {
