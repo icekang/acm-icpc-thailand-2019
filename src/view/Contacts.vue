@@ -18,7 +18,7 @@
         @click="toggleInfo(item, key)"
       />
     </gmap-map>
-    <h2 class="display-1 pt-2">Faculty of Engineering, Chulalongkorn University</h2>
+    <h2 class="display-1 pt-4">Faculty of Engineering, Chulalongkorn University</h2>
     <p>Athasit Surarerks<br />athasit@cp.eng.chula.ac.th<br />02-218-6957</p>
   </div>
 </template>
