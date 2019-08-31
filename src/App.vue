@@ -155,24 +155,24 @@ export default {
   text-shadow: 2px 2px 4px #000000;
   color: white;
 }
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 956px) {
   .text-title {
     font-size: 80px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 955px) {
   .text-title {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 956px) {
   .text-body {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 955px) {
   .text-body {
-    font-size: 22px;
+    font-size: 15px;
   }
 }
 .content {
