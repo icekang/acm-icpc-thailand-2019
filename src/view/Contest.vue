@@ -1,11 +1,28 @@
 <template>
   <div class="px-5 mx-5 my-5">
-    <h1>Contest Information</h1>
+    <h1>Online Round</h1>
+    <br />
     <h2 class="display-1 pb-2">Time</h2>
     <p>
       19 October 2019
       <br />
-      8:30 - 12:00 (Register 8:30 - 9:00)
+      08:30 - 12:00 (Register 8:30 - 9:00)
+    </p>
+    <h2 class="display-1 pb-2">Location</h2>
+    <p>
+      Computer Center, 2nd Floor Building 3, Faculty of Engineering, Chulalongkorn University, 254 Phayathai Road,
+      Wangmai, Pathumwan, Bangkok, 10330
+      <br />
+      ศูนย์คอมพิวเตอร์ อาคาร 3 ชั้น 2 คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย 254 ถนนพญาไท แขวงวังใหม่ เขตปทุมวัน กทม.
+      10330
+    </p>
+    <h1>Regional Round</h1>
+    <br />
+    <h2 class="display-1 pb-2">Time</h2>
+    <p>
+      02 November - 03 November 2019
+      <br />
+      08:00 - 18:00
     </p>
     <h2 class="display-1 pb-2">Location</h2>
     <p>
@@ -20,6 +37,11 @@
 <style scoped>
 h1 {
   font-size: 5rem;
+  color: #6b0000;
+  font-family: Playfair Display, Times, serif;
+}
+h2 {
+  font-size: 3rem;
   color: #6b0000;
   font-family: Playfair Display, Times, serif;
 }
