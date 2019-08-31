@@ -23,21 +23,32 @@
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
         </div>
-        <div class="px-5 mt-3">
-          <h2 class="text-shadow text-body">
-            Register: 26 Aug - 20 Sep 2019
-          </h2>
-          <h2 class="text-shadow text-body">
-            Start: 19 Oct 2019
-          </h2>
+        <div class="px-5 mt-3" style="display: flex;">
+          <div>
+            <h2 class="text-shadow text-body">
+              Online Round:
+            </h2>
+            <h2 class="text-shadow text-body">
+              Register: 26 Aug - 20 Sep 2019
+            </h2>
+            <h2 class="text-shadow text-body">
+              Start: 19 Oct 2019
+            </h2>
+          </div>
+          <div class="partition mx-3" />
+          <div>
+            <h2 class="text-shadow text-body">
+              Regional Round:
+            </h2>
+            <h2 class="text-shadow text-body">
+              Register: 09 Sep - 07 Oct 2019
+            </h2>
+            <h2 class="text-shadow text-body">
+              Start: 02 Nov - 03 Nov 2019
+            </h2>
+          </div>
         </div>
-        <!-- <div class="px-5 mt-2">
-          <h2 class="text-shadow text-body">
-            Hosted by Faculty of Engineering
-          </h2>
-          <h2 class="text-shadow text-body">Chulalongkorn University</h2>
-        </div> -->
-        <div class="text-xs pt-5 px-5">
+        <div class="text-xs pt-3 px-5">
           <v-btn
             large
             round
@@ -124,6 +135,12 @@ export default {
 </script>
 
 <style>
+.partition {
+  border: 0;
+  width: 5px !important;
+  box-shadow: 2px 2px 4px #000000;
+  background-color: white;
+}
 .v-parallax__content {
   padding-right: 0 !important;
   padding-left: 0 !important;
