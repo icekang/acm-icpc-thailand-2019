@@ -84,6 +84,14 @@
         <v-icon>assignment</v-icon>
       </v-btn>
     </transition>
+    <div class="pt-5 pb-3" id="content-cu-eng">
+      <img
+        :src="require(`@/assets/cu-eng-logo.png`)"
+        alt="Chula Engineering"
+        width="70%"
+        style="display: block; margin-left: auto; margin-right: auto;"
+      />
+    </div>
   </v-app>
 </template>
 
