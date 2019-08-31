@@ -13,9 +13,9 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn :color="colorToolbarTextByScroll" to="/" flat>Home</v-btn>
-        <v-btn :color="colorToolbarTextByScroll" to="/Contest" flat>Contest</v-btn>
-        <v-btn :color="colorToolbarTextByScroll" to="/Rules" flat>Rules</v-btn>
-        <v-btn :color="colorToolbarTextByScroll" to="/Contacts" flat>Contacts & Hosts</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/contest" flat>Contest</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/rules" flat>Rules</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/contacts" flat>Contacts & Hosts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-parallax :src="red_castle" height="550" style="padding: 0 !important;">

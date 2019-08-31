@@ -27,9 +27,9 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/Rules', component: Rules },
-  { path: '/Contest', component: Contest },
-  { path: '/Contacts', component: Contacts }
+  { path: '/rules', component: Rules },
+  { path: '/contest', component: Contest },
+  { path: '/contacts', component: Contacts }
 ]
 
 const router = new VueRouter({
