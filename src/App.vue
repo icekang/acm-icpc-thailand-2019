@@ -29,10 +29,10 @@
               Online Round:
             </h2>
             <h2 class="text-shadow text-body">
-              Register: 26 Aug - 09 Oct 2019
+              Register Date: 26 Aug - 07 Oct 2019
             </h2>
             <h2 class="text-shadow text-body">
-              Start: 19 Oct 2019
+              Contest Date: 19 Oct 2019
             </h2>
           </div>
           <div class="partition mx-3" />
@@ -41,10 +41,10 @@
               Regional Round:
             </h2>
             <h2 class="text-shadow text-body">
-              Register: 09 Sep - 07 Oct 2019
+              Register Date: 09 Sep - 07 Oct 2019
             </h2>
             <h2 class="text-shadow text-body">
-              Start: 02 Nov - 03 Nov 2019
+              Contest Date: 02 Nov - 03 Nov 2019
             </h2>
           </div>
         </div>
