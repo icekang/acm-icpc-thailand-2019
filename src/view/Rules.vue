@@ -1,7 +1,11 @@
 <template>
   <div class="px-5 mx-5 my-5">
-    <div v-for="(item, index) in rules" :key="index">
-      <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+    <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed>Online</v-btn>
+    <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
+    <div v-if="ruleType === 'regional'">
+      <div v-for="(item, index) in regional_rules" :key="index">
+        <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+      </div>
     </div>
   </div>
 </template>
@@ -14,7 +18,9 @@ export default {
   components: { RulePart },
   data() {
     return {
-      rules: [
+      ruleType: 'online',
+      online_rules: [],
+      regional_rules: [
         {
           title: 'ICPC Regional Rules for 2019 Regionals',
           introduction: '',
@@ -287,20 +293,44 @@ export default {
                   text:
                     'The results of the regional contest are not final until the complaints and appeals process has run its course.  Only coaches may file complaints and appeals.  An appeal must be based on one or more of the following circumstances: violations of the Rules, misconduct by teams, or gross misconduct by contest officials with the intent to harm.  The decisions of the judges are final.  Specifically, a decision on a problem submission MAY NOT be appealed.  The Appeals Committee overturns decisions only under extraordinary circumstances.  The decision of the Appeals Committee is final.  No additional finals invitations will be given to remedy a complaint. All complaints will be acknowledged.'
                 },
-                {text: 'The appeal will be automatically rejected if the above procedure is not followed.'}
+                { text: 'The appeal will be automatically rejected if the above procedure is not followed.' }
               ]
             },
             {
               head: 'Advancing to the ICPC World Finals',
               texts: [
-                {text: 'The highest level Regional Contests advance teams to the ICPC World Finals.  Additional teams who competed in the highest level of regional contests may be invited to the ICPC World Finals as wild card teams.'},
-                {text: 'Teams qualify to advance to the ICPC World Finals through Regional Contests and by satisfying all rules posted in The Rules of the ICPC World Finals. Specifically:'},
-                {text: 'To qualify for the ICPC World Finals, the coach and all team members must be fully registered in the ICPC Registration System BEFORE competing in ANY regional qualifying event.  Incomplete registration or circumvention that leads to incomplete or false data is grounds for immediate disqualification.'},
-                {text: 'Only one team from a given institution may advance to the ICPC World Finals.  No team member on the qualifying team may have competed as a contestant in two previous ICPC World Finals.'},
-                {text: 'The coach of a qualifying team is the point-of-contact before and during ICPC World Finals activities.  The coach must complete certification at the Team Certification Web Site within five (5) days of notification.  Qualifying teams will be invited by email within one day of completing certification.'},
-                {text: 'Qualifying teams requiring visas must initiate the process of applying for visas within ten days of being issued an invitation.  Teams failing to comply with any of these requirements will be ruled ineligible to compete in the ICPC World Finals.  Upon completion of these requirements, a qualifying team will be advanced to the ICPC World Finals.'},
-                {text: 'A team advancing to the ICPC World Finals will be comprised of the same three members as when it qualified.  If a team member is unwilling, unable or unfit to compete in the ICPC World Finals, the coach must notify the ICPC Manager promptly.  A team member who is unwilling or unfit to compete in the ICPC World Finals will be disqualified from further ICPC competitions.  The team member may appeal disqualification to the Appeals Committee.'},
-                {text: 'At on-site registration, participants must provide a picture ID (passport, drivers license, etc).  Contestants must show proof of enrollment at the university during the term of the regional contest at which they qualified.  A letter on university stationery with the signature of a university official accompanied by an English translation is sufficient.'}
+                {
+                  text:
+                    'The highest level Regional Contests advance teams to the ICPC World Finals.  Additional teams who competed in the highest level of regional contests may be invited to the ICPC World Finals as wild card teams.'
+                },
+                {
+                  text:
+                    'Teams qualify to advance to the ICPC World Finals through Regional Contests and by satisfying all rules posted in The Rules of the ICPC World Finals. Specifically:'
+                },
+                {
+                  text:
+                    'To qualify for the ICPC World Finals, the coach and all team members must be fully registered in the ICPC Registration System BEFORE competing in ANY regional qualifying event.  Incomplete registration or circumvention that leads to incomplete or false data is grounds for immediate disqualification.'
+                },
+                {
+                  text:
+                    'Only one team from a given institution may advance to the ICPC World Finals.  No team member on the qualifying team may have competed as a contestant in two previous ICPC World Finals.'
+                },
+                {
+                  text:
+                    'The coach of a qualifying team is the point-of-contact before and during ICPC World Finals activities.  The coach must complete certification at the Team Certification Web Site within five (5) days of notification.  Qualifying teams will be invited by email within one day of completing certification.'
+                },
+                {
+                  text:
+                    'Qualifying teams requiring visas must initiate the process of applying for visas within ten days of being issued an invitation.  Teams failing to comply with any of these requirements will be ruled ineligible to compete in the ICPC World Finals.  Upon completion of these requirements, a qualifying team will be advanced to the ICPC World Finals.'
+                },
+                {
+                  text:
+                    'A team advancing to the ICPC World Finals will be comprised of the same three members as when it qualified.  If a team member is unwilling, unable or unfit to compete in the ICPC World Finals, the coach must notify the ICPC Manager promptly.  A team member who is unwilling or unfit to compete in the ICPC World Finals will be disqualified from further ICPC competitions.  The team member may appeal disqualification to the Appeals Committee.'
+                },
+                {
+                  text:
+                    'At on-site registration, participants must provide a picture ID (passport, drivers license, etc).  Contestants must show proof of enrollment at the university during the term of the regional contest at which they qualified.  A letter on university stationery with the signature of a university official accompanied by an English translation is sufficient.'
+                }
               ]
             }
           ]
