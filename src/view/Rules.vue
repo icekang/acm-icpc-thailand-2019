@@ -3,7 +3,7 @@
     <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed>Online</v-btn>
     <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
     <div v-if="ruleType === 'online'">
-      <h1>กฎกติกาการแข่งขัน</h1>
+      <h1>กฎกติกาการแข่งขันรอบ Online</h1>
       <p>
         กฎและการตัดสินที่ใช้ในการแข่งขัน อ้างอิงจากกฎการแข่งขันหลักของ ACM-ICPC ในระดับ World Final รวมไปถึงระดับ
         Regional ของภูมิภาคต่าง ๆ โดยคณะกรรมการฯ ได้ปรับปรุงบางส่วนให้เข้ากับสภาพการแข่งขันในพื้นที่ปัจจุบัน
