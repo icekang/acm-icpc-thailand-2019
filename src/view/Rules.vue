@@ -53,27 +53,27 @@ export default {
               texts: [
                 {
                   text:
-                    'Each team is allowed to bring no more than 3 books e.g. text book, dictionary, magazine (also applicable with copies of a book). Document with no more than 100 pages and stationary are also allowed. All of the mentioned must be submitted before competition. Anything that has not been submitted before competition is not allowed in the competition.'
+                    '- Each team is allowed to bring no more than 3 books e.g. text book, dictionary, magazine (also applicable with copies of a book). Document with no more than 100 pages and stationary are also allowed. All of the mentioned must be submitted before competition. Anything that has not been submitted before competition is not allowed in the competition.'
                 },
-                { text: 'Other belongings are not allowed in the competition room.' },
+                { text: '- Other belongings are not allowed in the competition room.' },
                 {
                   text:
-                    'All communication and electronic devices e.g. phone, calculator, MP3 player, flash drive, CD, iPod, are not allowed.'
-                },
-                {
-                  text:
-                    'Each team must use the provided computers and devices. Personal computers or devices are not allowed.'
+                    '- All communication and electronic devices e.g. phone, calculator, MP3 player, flash drive, CD, iPod, are not allowed.'
                 },
                 {
                   text:
-                    'Each team is not allowed to communicate with anyone other than its team members, competition organizers, and proctors.'
+                    '- Each team must use the provided computers and devices. Personal computers or devices are not allowed.'
                 },
                 {
                   text:
-                    'During competition, each team member can ask proctors to go to the provided restroom with supervision from proctors no more than 15 minutes at a time.'
+                    '- Each team is not allowed to communicate with anyone other than its team members, competition organizers, and proctors.'
                 },
-                { text: 'Each team should not be too loud or interrupt other teams.' },
-                { text: 'Each team is not allowed to use the Internet or attempt to use the Internet.' }
+                {
+                  text:
+                    '- During competition, each team member can ask proctors to go to the provided restroom with supervision from proctors no more than 15 minutes at a time.'
+                },
+                { text: '- Each team is not allowed to use the Internet or attempt to use the Internet.' },
+                { text: '- Each team should not be too loud or interrupt other teams.' }
               ]
             },
             {
@@ -427,6 +427,7 @@ h1 {
 }
 p {
   font-size: 1.3rem;
+  text-indent: 2em;
 }
 li {
   font-size: 1.2rem;
