@@ -29,7 +29,7 @@
               Online Round:
             </h2>
             <h2 class="text-shadow text-body">
-              Register: 26 Aug - 20 Sep 2019
+              Register: 26 Aug - 09 Oct 2019
             </h2>
             <h2 class="text-shadow text-body">
               Start: 19 Oct 2019
