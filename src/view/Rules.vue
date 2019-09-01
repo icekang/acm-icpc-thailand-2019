@@ -3,92 +3,9 @@
     <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed>Online</v-btn>
     <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
     <div v-if="ruleType === 'online'">
-      <h1>กฎกติกาการแข่งขันรอบ Online</h1>
-      <p>
-        กฎและการตัดสินที่ใช้ในการแข่งขัน อ้างอิงจากกฎการแข่งขันหลักของ ACM-ICPC ในระดับ World Final รวมไปถึงระดับ
-        Regional ของภูมิภาคต่าง ๆ โดยคณะกรรมการฯ ได้ปรับปรุงบางส่วนให้เข้ากับสภาพการแข่งขันในพื้นที่ปัจจุบัน
-        ผู้เข้าร่วมแข่งขันทุกทีมและผู้ควบคุมทีม รวมถึงผู้ช่วยผู้ควบคุมทีม ควรอ่านทำความเข้าใจและปฏิบัติตามอย่างเคร่งครัด
-        เพื่อความเสมอภาคและความยุติธรรมในการแข่งขัน
-      </p>
-      <br /><br />
-      <h2 class="display-1">ข้อกำหนดของทีม</h2>
-      <p>
-        ทีมต้องประกอบด้วยโค้ช 1 คน (อาจมีผู้ติดตามได้) และผู้เข้าแข่งขัน 3 คน ซึ่งมาจากสถาบันเดียวกัน
-        หากไม่เป็นไปตามข้อกำหนดนี้ จะไม่ได้รับการจัดอันดับ รางวัล และสิทธิ์ในการผ่านเข้าสู่รอบถัดไป
-        แต่สามารถเข้าร่วมการแข่งขันได้โดยได้รับอนุญาตจากผู้จัดการแข่งขัน
-      </p>
-      <br /><br />
-      <h2 class="display-1">ลักษณะการแข่งขัน</h2>
-      <p>
-        แข่งขันเขียนโปรแกรมแก้โจทย์ปัญหา (โจทย์อธิบายเป็นภาษาอังกฤษ) โดยใช้ภาษา C, C++ หรือ Java เป็นภาษาโปรแกรม
-        เวลาแข่งขัน 3 ชั่วโมง ติดต่อกัน ทีมเข้าแข่งขันเลือกทำโจทย์ข้อใดก่อนก็ได้ แต่ละข้อใช้ภาษาโปรแกรมอะไรก็ได้ (C,
-        C++, Java) ทีมที่เข้าแข่งขัน มีสมาชิก 3 คน เป็นนิสิต/นักศึกษาจากสถาบันเดียวกัน
-      </p>
-      <br /><br />
-      <h2 class="display-1">ข้อกำหนดในห้องแข่งขัน</h2>
-      <br />
-      <ol>
-        <li>
-          อนุญาตให้นำหนังสือ อาทิ Text Book, Dictionary, Magazine เข้าได้ทีมละไม่เกิน 3 เล่ม (สามารถเป็นแบบถ่ายสำเนาได้)
-          เอกสารอื่น ๆ ในรูปแบบกระดาษไม่เกิน 100 หน้า รวมถึงอุปกรณ์เครื่องเขียนต่างๆ โดยให้นำมาฝากไว้ ก่อนการแข่งจริง
-          และไม่อนุญาตให้นำเข้าห้องเพิ่ม
-        </li>
-        <li>ไม่อนุญาตให้นำสัมภาระหรือสิ่งของใดๆ เข้าไปในห้องแข่ง</li>
-        <li>
-          ไม่อนุญาตให้ใช้อุปกรณ์สื่อสารหรืออุปกรณ์อิเล็กทรอนิกส์ทุกชนิด อาทิ โทรศัพท์, เครื่องคิดเลข, เครื่องเล่น MP3,
-          Flash Drive, CD, iPod เป็นต้น
-        </li>
-        <li>
-          ผู้เข้าแข่งขันต้องใช้เครื่องคอมพิวเตอร์และอุปกรณ์ที่ทางผู้จัดการแข่งขันจัดเตรียมไว้ให้เท่านั้น
-          ไม่อนุญาตให้นำอุปกรณ์มาเอง
-        </li>
-        <li>
-          ไม่อนุญาตให้ผู้เข้าแข่งขันติดต่อสื่อสารกับบุคคลอื่นใด นอกเหนือจากสมาชิกภายในทีมตนเอง
-          และคณะกรรมการจัดการแข่งขันหรือนิสิตช่วยงานในระหว่างการแข่งขัน
-        </li>
-        <li>
-          ในระหว่างการแข่งขัน สมาชิกในทีมอาจขออนุญาตกรรมการประจำห้องไปห้องน้ำหรือผ่อนคลาย ภายนอกห้องแข่งขัน
-          ในขอบเขตที่กำหนดไว้ และมีคณะกรรมการคอยเฝ้าติดตาม แต่ละครั้งไม่เกิน 15 นาที
-        </li>
-        <li>ไม่ควรส่งเสียงดังเกินควรหรือทำการอื่นใด ที่เป็นการรบกวนทีมอื่น ๆ</li>
-        <li>ไม่อนุญาต ให้ใช้ Internet หรือ พยายามติดต่อใช้ Internet ด้วยวิธีการใด ๆ</li>
-      </ol>
-      <br /><br />
-      <h2 class="display-1">ระหว่างการแข่งขัน</h2>
-      <p>
-        การส่งโปรแกรมเพื่อรับการตรวจแต่ละครั้ง จะเรียกว่า Run
-        โดยเมื่อส่งไปแล้วระบบจะตรวจและแจ้งว่าโปรแกรมดังกล่าวสามารถทำงานได้ถูกต้องหรือไม่ (Yes/No)
-        ผู้เข้าแข่งขันทุกทีมจำเป็นต้องเข้าสู่ระบบ (Login) ผ่านโปรแกรม PC2
-        ตลอดระยะเวลาการแข่งขันด้วยชื่อผู้ใช้งานที่แจกให้แต่ละทีมเท่านั้น
-        หากพบความพยายามในการเข้าสู่ระบบด้วยชื่อผู้ใช้งานอื่นจะถูกพิจารณาตัดสิทธิ์จากการแข่งขัน
-      </p>
-      <p>
-        หากผู้เข้าแข่งขันพบความผิดปกติในโจทย์แข่งขัน ให้สอบถามผ่านทางระบบ Clarification Request ของ PC2
-      </p>
-      <p>
-        ในระหว่างการแข่งขัน ผู้เข้าแข่งขันสามารถเข้าชม Live Scoreboard
-        แจ้งอันดับของทีมได้ผ่านขั้นตอนที่จะระบุในห้องแข่งขัน และจะมีการแสดง Live Scoreboard
-        ไปยังห้องรับรองผู้ควบคุมทีมด้วยเช่นเดียวกัน ซึ่งจะทำการปิดระบบ Live Scoreboard ก่อนหมดเวลการแข่งขัน 45 นาที
-      </p>
-      <p>
-        ผู้เข้าแข่งขันจะได้รับผลการตรวจ (Judge’s Response - Yes/No) ตามปกติตลอดระยะเวลาการแข่งขัน
-      </p>
-      <br /><br />
-      <h2 class="display-1">การตัดสิน</h2>
-      <p>
-        การเรียงอันดับของทีม นับจากจำนวนโจทย์ที่ทำได้ (Problem Solved) เป็นหลัก ถ้ามีทีมที่ทำได้จำนวนโจทย์เท่ากัน
-        ให้เรียงตามเวลา (Total Time) จากน้อยไปมาก Total Time คือ ผลรวมของเวลา (จำนวนนาที นับจากจุดเริ่มต้นการแข่งขัน)
-        ที่ใช้ทำโจทย์ในแต่ละข้อ โดยจะพิจารณาเฉพาะข้อที่ทำได้ถูกต้อง
-        โดยเลือกเอาเวลาที่ใช้แก้ปัญหาโจทย์ได้เป็นครั้งแรกของข้อนั้นๆ (First Accepted Run)
-        รวมกับเวลาที่เกิดจากการส่งโปรแกรมคำตอบ (Run) ที่ทำงานไม่ถูกต้องของข้อนั้นๆ จะถูกเพิ่มเวลา (Penalty) เป็น 20
-        นาทีต่อครั้ง เวลาของโจทย์ของข้อที่ยังไม่ถูกต้องจะไม่นำไปคิดในเวลารวม หากมีตั้งแต่สองทีมขึ้นไปที่มีจำนวนข้อ
-        Problem Solved และ Total Time เท่ากันพอดี ให้พิจารณาจากเวลาของข้อสุดท้ายที่ทีมนั้นๆ ทำได้
-        โดยไม่คำนึงถึงเวลาที่เกิดจาก Penalty ของข้อนั้น ใครทำได้ก่อนเป็นผู้ชนะ
-        หากเท่ากันอีกจึงพิจารณาข้อก่อนหน้าตามลำดับ หากพบเจตนาในการทุจริตของทีมใดๆ
-        คณะกรรมการมีสิทธิ์ในการตัดสิทธิ์การแข่งขัน หากมีข้อร้องเรียนใดๆ เกี่ยวกับการแข่งขัน
-        ต้องดำเนินการให้แล้วเสร็จภายใน 30 นาทีหลังจากสิ้นสุดการแข่งขัน ในกรณีที่เกิดเหตุการณ์ไม่ปกติในการแข่งขัน
-        คณะกรรมการจัดการแข่งขันมีสิทธิ์ในการตัดสินเป็นกรณีไป และการตัดสินของคณะกรรมการจัดการแข่งขันถือเป็นสิ้นสุด
-      </p>
+      <div v-for="(item, index) in online_rules" :key="index">
+        <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+      </div>
     </div>
     <div v-if="ruleType === 'regional'">
       <div v-for="(item, index) in regional_rules" :key="index">
@@ -107,11 +24,84 @@ export default {
   data() {
     return {
       ruleType: 'online',
-      online_rules: [],
+      online_rules: [
+        {
+          title: 'ICPC Regional Rules for 2019 Online',
+          introduction:
+            'Competition rules are based on ACM-ICPC Regionals and World Finals. The rules are partly adjusted to better suit the competition area. Competitors and coaches should be well aware and strictly conform to the rules in order to ensure equality and fairness of the competition.',
+          body: [
+            {
+              head: 'Team requirement',
+              texts: [
+                {
+                  text:
+                    'Each team must contain a coach (a follower allowed) and 3 competitors from the same institute. If the above condition is not met, the team will not be ranked and will not participate in any rewards and rights to advance in the competition. However, the team can still compete if approved by competition organizers.'
+                }
+              ]
+            },
+            {
+              head: 'Competition',
+              texts: [
+                {
+                  text:
+                    'The competition is about writing a program to solve problems (problem statements are in English). The program must be written in either C, C++, or Java programming language. The duration of the competition is 3 hours. Each team can solve the problems in any order; the program for each problem can be written in any of aforementioned programming languages. The team must consist of 3 students from the same institute.'
+                }
+              ]
+            },
+            {
+              head: 'Competition environment',
+              texts: [
+                {
+                  text:
+                    'Each team is allowed to bring no more than 3 books e.g. text book, dictionary, magazine (also applicable with copies of a book). Document with no more than 100 pages and stationary are also allowed. All of the mentioned must be submitted before competition. Anything that has not been submitted before competition is not allowed in the competition.'
+                },
+                { text: 'Other belongings are not allowed in the competition room.' },
+                {
+                  text:
+                    'All communication and electronic devices e.g. phone, calculator, MP3 player, flash drive, CD, iPod, are not allowed.'
+                },
+                {
+                  text:
+                    'Each team must use the provided computers and devices. Personal computers or devices are not allowed.'
+                },
+                {
+                  text:
+                    'Each team is not allowed to communicate with anyone other than its team members, competition organizers, and proctors.'
+                },
+                {
+                  text:
+                    'During competition, each team member can ask proctors to go to the provided restroom with supervision from proctors no more than 15 minutes at a time.'
+                },
+                { text: 'Each team should not be too loud or interrupt other teams.' },
+                { text: 'Each team is not allowed to use the Internet or attempt to use the Internet.' }
+              ]
+            },
+            {
+              head: 'During competition',
+              texts: [
+                {
+                  text:
+                    'Each submission to the problem is called a “run.” When a run is submitted, the system will verify if the run is correct (Yes/No). Each team must login to PC2 system with the provided account at all time during the competition. If an attempt to login to the account of other team is found, competition organizers will consider disqualifying the team. If an anomaly in problem statements is observed, a clarification request can be submitted on PC2 during competition. Using the instructions provided during the competition, each team can see live scoreboard which tells the current ranking of every team. Live scoreboard will also be shown to coaches in the provided room. The live scoreboard will be frozen during the last 45 minutes of the competition. During that time, the competitors will still get judge’s responses as usual.'
+                }
+              ]
+            },
+            {
+              head: 'Judgement',
+              texts: [
+                {
+                  text:
+                    'All teams will be ranked based on the number of problems solved. If the number of problems solved is equal, the total time (the summation of time used for the solved problems including penalty) is considered next. The time used in calculation is the time of the first accepted run of each problem, and penalty time is calculated by the number of rejected runs on each problem, 20 minutes per run. For unsolved problems, penalty time will not be taken into calculation. If both number of problems solved and total time are equal, the time of the last solved problem without penalty is considered. If the time is still equal, the previously solved problems will be considered subsequently. If an attempt to cheat is observed, competition organizers will consider disqualifying the team. It there is any complaint about the competition, the complaint must be done within 30 minutes after competition ends. If any unexpected circumstance happens in the competition, competition organizers will consider case by case, and the decisions of competition organizers are final.'
+                }
+              ]
+            }
+          ]
+        }
+      ],
       regional_rules: [
         {
           title: 'ICPC Regional Rules for 2019 Regionals',
-          introduction: '',
+          introduction:
+            'The following has been excerpted from ICPC Regional Rules for 2019 Regionals (https://icpc.baylor.edu/regionals/rules)',
           body: [
             {
               head: 'Registration',
