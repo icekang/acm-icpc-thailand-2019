@@ -59,7 +59,7 @@
             ref="register_btn"
             href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
           >
-            Register
+            <span><v-icon>create</v-icon> Register</span>
           </v-btn>
         </div>
         <div class="content px-5 mb-2 pt-5"></div>
@@ -73,15 +73,15 @@
       <v-btn
         fixed
         dark
-        fab
         bottom
         right
+        round
         large
         color="#6b0000"
         v-if="show_float_btn"
         href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
       >
-        <v-icon>assignment</v-icon>
+        <span><v-icon>create</v-icon> Register</span>
       </v-btn>
     </transition>
     <div class="pt-5 pb-3" id="content-cu-eng">
