@@ -207,4 +207,7 @@ export default {
   transform: translateX(10px);
   opacity: 0;
 }
+.v-btn--large {
+  padding: 0 20px !important;
+}
 </style>
