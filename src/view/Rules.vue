@@ -423,7 +423,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
   font-size: 5rem;
   color: #6b0000;
