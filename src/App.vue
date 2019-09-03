@@ -23,31 +23,33 @@
         <div class="px-5 mt-5 pt-5">
           <h1 class="text-shadow text-title">ICPC Regional Contest 2019</h1>
         </div>
-        <div class="px-5 mt-3" style="display: flex;">
-          <div>
-            <h2 class="text-shadow text-body">
-              Online Round:
-            </h2>
-            <h2 class="text-shadow text-body">
-              Register Date: 26 Aug - 07 Oct 2019
-            </h2>
-            <h2 class="text-shadow text-body">
-              Contest Date: 19 Oct 2019
-            </h2>
+        <transition name="slide-fade">
+          <div v-if="isVisible" class="px-5 mt-3" style="display: flex;">
+            <div>
+              <h2 class="text-shadow text-body">
+                Online Round:
+              </h2>
+              <h2 class="text-shadow text-body">
+                Register Date: 26 Aug - 07 Oct 2019
+              </h2>
+              <h2 class="text-shadow text-body">
+                Contest Date: 19 Oct 2019
+              </h2>
+            </div>
+            <div class="partition mx-3" />
+            <div>
+              <h2 class="text-shadow text-body">
+                Regional Round:
+              </h2>
+              <h2 class="text-shadow text-body">
+                Register Date: 09 Sep - 07 Oct 2019
+              </h2>
+              <h2 class="text-shadow text-body">
+                Contest Date: 02 Nov - 03 Nov 2019
+              </h2>
+            </div>
           </div>
-          <div class="partition mx-3" />
-          <div>
-            <h2 class="text-shadow text-body">
-              Regional Round:
-            </h2>
-            <h2 class="text-shadow text-body">
-              Register Date: 09 Sep - 07 Oct 2019
-            </h2>
-            <h2 class="text-shadow text-body">
-              Contest Date: 02 Nov - 03 Nov 2019
-            </h2>
-          </div>
-        </div>
+        </transition>
         <div class="text-xs pt-3 px-5">
           <v-btn
             large
@@ -105,7 +107,8 @@ export default {
     show_float_btn: false,
     logo_color: logo_color,
     logo_white: logo_white,
-    red_castle: red_castle
+    red_castle: red_castle,
+    isVisible: false
   }),
   computed: {
     logoByScroll: function() {
@@ -135,6 +138,9 @@ export default {
       }
       return (this.show_float_btn = false)
     }
+  },
+  mounted() {
+    this.isVisible = !this.isVisible
   },
 
   name: 'App',
@@ -197,7 +203,7 @@ export default {
   opacity: 0;
 }
 .slide-fade-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .slide-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
