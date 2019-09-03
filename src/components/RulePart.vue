@@ -22,3 +22,20 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1 {
+  font-size: 5rem;
+  color: #6b0000;
+  font-family: Playfair Display, Times, serif;
+}
+.display-1 {
+  color: #6b0000;
+}
+p {
+  font-size: 1.3rem;
+  text-indent: 2em;
+}
+li {
+  font-size: 1.2rem;
+}
+</style>

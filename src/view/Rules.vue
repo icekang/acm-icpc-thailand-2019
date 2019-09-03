@@ -424,21 +424,6 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 5rem;
-  color: #6b0000;
-  font-family: Playfair Display, Times, serif;
-}
-p {
-  font-size: 1.3rem;
-  text-indent: 2em;
-}
-li {
-  font-size: 1.2rem;
-}
-.display-1 {
-  color: #6b0000;
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
