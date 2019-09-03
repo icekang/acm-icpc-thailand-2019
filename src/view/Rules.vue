@@ -2,16 +2,20 @@
   <div class="px-5 mx-5 my-5">
     <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed>Online</v-btn>
     <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
-    <div v-if="ruleType === 'online'">
-      <div v-for="(item, index) in online_rules" :key="index">
-        <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+    <transition name="fade" mode="out-in" duration="400">
+      <div v-if="ruleType === 'online'">
+        <div v-for="(item, index) in online_rules" :key="index">
+          <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+        </div>
       </div>
-    </div>
-    <div v-if="ruleType === 'regional'">
-      <div v-for="(item, index) in regional_rules" :key="index">
-        <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+    </transition>
+    <transition name="fade" mode="out-in" duration="400">
+      <div v-if="ruleType === 'regional'">
+        <div v-for="(item, index) in regional_rules" :key="index">
+          <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -434,5 +438,23 @@ li {
 }
 .display-1 {
   color: #6b0000;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

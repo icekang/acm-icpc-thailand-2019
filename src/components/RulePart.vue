@@ -3,6 +3,7 @@
     <h1>{{ title }}</h1>
     <br />
     <p>{{ introduction }}</p>
+    <br /><br />
     <div v-for="(item, index) in body" :key="index">
       <h2 class="display-1">{{ item.head }}</h2>
       <br />
