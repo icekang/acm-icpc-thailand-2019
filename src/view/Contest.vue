@@ -4,9 +4,9 @@
     <br />
     <h2 class="my-display-1 pb-2">Time</h2>
     <p>
-      19 October 2019
+      18 October 2019
       <br />
-      08:30 - 12:00 (Register 8:30 - 9:00)
+      18:00 - 21:00
     </p>
     <h2 class="my-display-1 pb-2">Location</h2>
     <p>

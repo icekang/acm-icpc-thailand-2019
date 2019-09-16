@@ -34,7 +34,7 @@
                 Register Date: 26 Aug - 07 Oct 2019
               </h2>
               <h2 class="text-shadow text-body">
-                Contest Date: 19 Oct 2019
+                Contest Date: 18 Oct 2019
               </h2>
             </div>
             <div class="partition mx-3" />
@@ -183,11 +183,11 @@ export default {
     font-family: Roboto, sans-serif !important;
   }
   .partition {
-  border: 0;
-  width: 5px !important;
-  box-shadow: 2px 2px 4px #000000;
-  background-color: white;
-}
+    border: 0;
+    width: 5px !important;
+    box-shadow: 2px 2px 4px #000000;
+    background-color: white;
+  }
 }
 @media screen and (max-width: 955px) {
   .text-title {
@@ -208,11 +208,11 @@ export default {
     font-family: Roboto, sans-serif !important;
   }
   .partition {
-  border: 0;
-  width: 2px !important;
-  box-shadow: 2px 2px 4px #000000;
-  background-color: white;
-}
+    border: 0;
+    width: 2px !important;
+    box-shadow: 2px 2px 4px #000000;
+    background-color: white;
+  }
 }
 @media screen and (min-width: 956px) {
   .text-body {
