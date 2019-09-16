@@ -23,11 +23,11 @@ export default {
 }
 </script>
 <style scoped>
-h1 {
+/* h1 {
   font-size: 5rem;
   color: #6b0000;
   font-family: Playfair Display, Times, serif;
-}
+} */
 .display-1 {
   color: #6b0000;
 }

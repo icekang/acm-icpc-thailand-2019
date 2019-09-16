@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mx-5 my-5">
+  <div class="px-5 my-5" style="max-width:703px; margin: 0 auto;">
     <h1>Hosts</h1>
     <gmap-map ref="mymap" :center="startLocation" :zoom="17" style="width: 100%; height: 300px">
       <gmap-info-window
@@ -18,7 +18,7 @@
         @click="toggleInfo(item, key)"
       />
     </gmap-map>
-    <h2 class="display-1 pt-4">Faculty of Engineering, Chulalongkorn University</h2>
+    <h2 class="my-display-1 pt-4">Faculty of Engineering, Chulalongkorn University</h2>
     <p>Athasit Surarerks<br />athasit@cp.eng.chula.ac.th<br />02-218-6957</p>
   </div>
 </template>
@@ -74,18 +74,10 @@ export default {
 }
 </script>
 <style scoped>
-h1 {
-  font-size: 5rem;
-  color: #6b0000;
-  font-family: Playfair Display, Times, serif;
-}
 p {
   font-size: 1.3rem;
 }
 li {
   font-size: 1.2rem;
-}
-.display-1 {
-  color: #6b0000;
 }
 </style>

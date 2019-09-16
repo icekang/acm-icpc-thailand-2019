@@ -1,6 +1,7 @@
 <template>
   <v-app v-scroll="onScroll">
     <v-toolbar :color="colorByScroll" fixed flat>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <router-link
         to="/"
         tag="img"
@@ -149,15 +150,6 @@ export default {
 </script>
 
 <style>
-.test{
-  display:none;
-}
-.partition {
-  border: 0;
-  width: 5px !important;
-  box-shadow: 2px 2px 4px #000000;
-  background-color: white;
-}
 .v-parallax__content {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -174,22 +166,64 @@ export default {
 }
 @media screen and (min-width: 956px) {
   .text-title {
-    font-size: 80px;
+    font-size: 70px;
   }
+  .my-display-1 {
+    font-size: 36px !important;
+    color: #6b0000;
+    font-family: Roboto, sans-serif !important;
+    letter-spacing: normal !important;
+    line-height: 40px !important;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #6b0000;
+    font-family: Roboto, sans-serif !important;
+  }
+  .partition {
+  border: 0;
+  width: 5px !important;
+  box-shadow: 2px 2px 4px #000000;
+  background-color: white;
+}
 }
 @media screen and (max-width: 955px) {
   .text-title {
-    font-size: 40px;
+    font-size: 35px;
   }
+  .my-display-1 {
+    font-size: 20px !important;
+    color: #6b0000;
+    font-family: Roboto, sans-serif !important;
+    letter-spacing: normal !important;
+    line-height: 40px !important;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #6b0000;
+    font-family: Roboto, sans-serif !important;
+  }
+  .partition {
+  border: 0;
+  width: 2px !important;
+  box-shadow: 2px 2px 4px #000000;
+  background-color: white;
+}
 }
 @media screen and (min-width: 956px) {
   .text-body {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 500;
   }
 }
 @media screen and (max-width: 955px) {
   .text-body {
     font-size: 15px;
+    font-weight: 500;
   }
 }
 .content {

@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mx-5 my-5">
+  <div class="px-5 my-5" style="margin: 0 auto; max-width: 703px">
     <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed>Online</v-btn>
     <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
     <transition name="fade" mode="out-in" duration="400">

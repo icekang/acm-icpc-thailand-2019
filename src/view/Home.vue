@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="content-icpc" class="container pt-5 mt-5">
-      <h1 style="font-size: 5em; color: #6b0000; font-family: Playfair Display, Times, serif;">
+      <h1>
         About ICPC
       </h1>
       <p style="font-size: 18px;">
@@ -26,7 +26,7 @@
       <div class="container">
         <div>
           <div align="right" style="width: 100%">
-            <h1 style="font-size: 5em; color: #6b0000; font-family: Playfair Display, Times, serif;">
+            <h1>
               About Host
             </h1>
             <v-flex>
