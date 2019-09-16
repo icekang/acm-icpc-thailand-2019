@@ -149,6 +149,9 @@ export default {
 </script>
 
 <style>
+.test{
+  display:none;
+}
 .partition {
   border: 0;
   width: 5px !important;
