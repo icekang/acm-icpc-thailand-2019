@@ -5,6 +5,7 @@ import Contest from './view/Contest.vue'
 import Contacts from './view/Contacts.vue'
 
 import RulePart from './components/RulePart.vue'
+import ContactPart from './components/ContactPart.vue'
 
 import App from './App.vue'
 import store from './store'

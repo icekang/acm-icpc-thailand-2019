@@ -1,83 +1,184 @@
 <template>
-  <div class="px-5 my-5" style="max-width:703px; margin: 0 auto;">
+  <div class="px-5 my-5" style="max-width:900px; margin: 0 auto;">
     <h1>Hosts</h1>
-    <gmap-map ref="mymap" :center="startLocation" :zoom="17" style="width: 100%; height: 300px">
-      <gmap-info-window
-        :options="infoOptions"
-        :position="infoPosition"
-        :opened="infoOpened"
-        @closeclick="infoOpened = false"
-      >
-        {{ infoContent }}
-      </gmap-info-window>
-      <gmap-marker
-        v-for="(item, key) in coordinates"
-        :key="key"
-        :position="getPosition(item)"
-        :clickable="true"
-        @click="toggleInfo(item, key)"
-      />
-    </gmap-map>
-    <h2 class="my-display-1 pt-4">Faculty of Engineering, Chulalongkorn University</h2>
-    <p>Athasit Surarerks<br />athasit@cp.eng.chula.ac.th<br />02-218-6957</p>
+    <div v-for="(item, index) in contacts" :key="index">
+      <ContactPart
+        :name="item.name"
+        :coordinates="item.coordinates"
+        :contact_person="item.contact_person"
+        :email="item.email"
+        :tel="item.tel"
+      ></ContactPart>
+    </div>
   </div>
 </template>
 <script>
-import { makeRe } from 'minimatch'
+import ContactPart from '../components/ContactPart.vue'
+
 export default {
   name: 'App',
-  components: {},
+  components: { ContactPart },
   data: () => ({
-    startLocation: {
-      lat: 13.736701,
-      lng: 100.533212
-    },
-    coordinates: {
-      0: {
-        full_name: 'Faculty of Engineering, Chulalongkorn University',
-        lat: '13.736701',
-        lng: '100.533212'
+    contacts: [
+      {
+        name: 'Faculty of Engineering, Chulalongkorn University',
+        coordinates: {
+          0: {
+            full_name: 'Faculty of Engineering, Chulalongkorn University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Prince of Songkla University Hat Yai Campus',
+        coordinates: {
+          0: {
+            full_name: 'Prince of Songkla University Hat Yai Campus',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: "King Mongkut's University of Technology North Bangkok",
+        coordinates: {
+          0: {
+            full_name: "King Mongkut's University of Technology North Bangkok",
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Kasetsart University Bangkok',
+        coordinates: {
+          0: {
+            full_name: 'Kasetsart University Bangkok',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Khonkaen University',
+        coordinates: {
+          0: {
+            full_name: 'Khonkaen University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Prince of Songkla University Phuket Campus',
+        coordinates: {
+          0: {
+            full_name: 'Prince of Songkla University Phuket Campus',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Chiangmai University',
+        coordinates: {
+          0: {
+            full_name: 'Chiangmai University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'University of Phayao',
+        coordinates: {
+          0: {
+            full_name: 'University of Phayao',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Mahidol University',
+        coordinates: {
+          0: {
+            full_name: 'Mahidol University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Mahasarakham University',
+        coordinates: {
+          0: {
+            full_name: 'Mahasarakham University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Burapha University',
+        coordinates: {
+          0: {
+            full_name: 'Burapha University',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
+      },
+      {
+        name: 'Kasetsart University Sriracha Campus',
+        coordinates: {
+          0: {
+            full_name: 'Kasetsart University Sriracha Campus',
+            lat: '13.736701',
+            lng: '100.533212'
+          }
+        },
+        contact_person: 'Athasit Surarerks',
+        email: 'athasit@cp.eng.chula.ac.th',
+        tel: '02-218-6957'
       }
-    },
-    infoPosition: null,
-    infoContent: null,
-    infoOpened: false,
-    infoCurrentKey: null,
-    infoOptions: {
-      pixelOffset: {
-        width: 0,
-        height: -35
-      }
-    }
-  }),
-  methods: {
-    getPosition: function(marker) {
-      console.log(marker)
-      console.log(makeRe.lat)
-      console.log(marker.lng)
-      return {
-        lat: parseFloat(marker.lat),
-        lng: parseFloat(marker.lng)
-      }
-    },
-    toggleInfo: function(marker, key) {
-      this.infoPosition = this.getPosition(marker)
-      this.infoContent = marker.full_name
-      if (this.infoCurrentKey == key) {
-        this.infoOpened = !this.infoOpened
-      } else {
-        this.infoOpened = true
-        this.infoCurrentKey = key
-      }
-    }
-  }
+    ]
+  })
 }
 </script>
-<style scoped>
-p {
-  font-size: 1.3rem;
-}
-li {
-  font-size: 1.2rem;
-}
+<style>
 </style>

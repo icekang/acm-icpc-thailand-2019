@@ -1,7 +1,6 @@
 <template>
   <v-app v-scroll="onScroll">
     <v-toolbar :color="colorByScroll" fixed flat>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <router-link
         to="/"
         tag="img"
@@ -12,7 +11,13 @@
         :style="{ cursor: 'pointer' }"
       ></router-link>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-toolbar-side-icon
+        style="background-color: rgba(0, 0, 0, 0) !important;"
+        class="hamburger"
+        dark
+        @click.stop="drawer = !drawer"
+      ></v-toolbar-side-icon>
+      <v-toolbar-items class="not-hamburger">
         <v-btn :color="colorToolbarTextByScroll" to="/" flat>Home</v-btn>
         <v-btn :color="colorToolbarTextByScroll" to="/contest" flat>Contest</v-btn>
         <v-btn :color="colorToolbarTextByScroll" to="/rules" flat>Rules</v-btn>
@@ -51,7 +56,7 @@
             </div>
           </div>
         </transition>
-        <div class="text-xs pt-3 px-5">
+        <div class="text-xs pt-3 px-5 register">
           <v-btn
             large
             round
@@ -61,6 +66,7 @@
             id="register_btn"
             ref="register_btn"
             href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+            style="margin: 0 !important"
           >
             <span><v-icon>create</v-icon> Register</span>
           </v-btn>
@@ -73,7 +79,7 @@
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <v-btn
+      <!-- <v-btn
         fixed
         dark
         bottom
@@ -85,7 +91,21 @@
         href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
       >
         <span><v-icon>create</v-icon> Register</span>
-      </v-btn>
+      </v-btn> -->
+      <v-speed-dial v-model="fab" right bottom fixed :open-on-hover="hover" transition="slide-y-reverse-transition">
+        <template v-slot:activator>
+          <v-btn v-model="fab" color="#6b0000" dark fab>
+            <v-icon>create</v-icon>
+            <v-icon>close</v-icon>
+          </v-btn>
+        </template>
+        <v-btn dark round small color="green" fab href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019">
+          <span>Online</span>
+        </v-btn>
+        <v-btn dark round small color="indigo" href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019">
+          <span>Regional</span>
+        </v-btn>
+      </v-speed-dial>
     </transition>
     <div class="pt-5 pb-3" id="content-cu-eng">
       <img
@@ -95,6 +115,55 @@
         style="display: block; margin-left: auto; margin-right: auto;"
       />
     </div>
+    <v-navigation-drawer
+      style="background-color: rgba(107,0,0,0.85); max-width: 75%"
+      v-model="drawer"
+      fixed
+      bottom
+      temporary
+      right
+    >
+      <v-list class="pt-0" dense>
+        <v-divider light></v-divider>
+
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/"
+              >Home</router-link
+            >
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/contest"
+              >Contest</router-link
+            >
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/rules"
+              >Rules</router-link
+            >
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/contacts"
+              >Contacts & Hosts</router-link
+            >
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
   </v-app>
 </template>
 
@@ -109,7 +178,10 @@ export default {
     logo_color: logo_color,
     logo_white: logo_white,
     red_castle: red_castle,
-    isVisible: false
+    isVisible: false,
+    drawer: false,
+    fab: true,
+    hover: false
   }),
   computed: {
     logoByScroll: function() {
@@ -119,7 +191,7 @@ export default {
       return 'rgba(0,0,0,' + this.transparency() + ')'
     },
     colorToolbarTextByScroll: function() {
-      return this.offsetTop == 0 ? '#6b0000' : 'white'
+      return this.offsetTop == 0 ? '#6b0000 !important' : 'white !important'
     }
   },
   methods: {
@@ -163,6 +235,22 @@ export default {
 .text-shadow {
   text-shadow: 2px 2px 4px #000000;
   color: white;
+}
+@media screen and (min-width: 700px) {
+  .hamburger {
+    display: none !important;
+  }
+  .not-hamburger {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hamburger {
+    display: block !important;
+  }
+  .not-hamburger {
+    display: none !important;
+  }
 }
 @media screen and (min-width: 956px) {
   .text-title {
