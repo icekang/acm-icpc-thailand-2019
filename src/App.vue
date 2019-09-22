@@ -125,6 +125,7 @@
         <span><v-icon>create</v-icon> Register</span>
       </v-btn> -->
       <v-speed-dial
+        v-if="show_float_btn"
         v-model="fab"
         :top="top"
         :bottom="bottom"
@@ -136,19 +137,28 @@
         fixed
       >
         <template v-slot:activator>
-          <v-btn v-model="fab" color="blue darken-2" dark fab>
-            <v-icon>account_circle</v-icon>
-            <v-icon>close</v-icon>
+          <v-btn v-model="fab" dark round large color="#6b0000" @click="showFAB = !showFAB">
+            <span v-if="!showFAB"><v-icon>create</v-icon> Register</span>
+            <v-icon v-if="showFAB">close</v-icon>
           </v-btn>
         </template>
-        <v-btn fab dark small color="green">
-          <v-icon>edit</v-icon>
+        <v-btn
+          round
+          color="pink lighten-5"
+          href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+          target="_blank"
+          style="font-size: 12px; max-width: 56px"
+        >
+          <span>Online</span>
         </v-btn>
-        <v-btn fab dark small color="indigo">
-          <v-icon>add</v-icon>
-        </v-btn>
-        <v-btn fab dark small color="red">
-          <v-icon>delete</v-icon>
+        <v-btn
+          round
+          color="pink lighten-5"
+          href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019"
+          target="_blank"
+          style="font-size: 12px; max-width: 56px"
+        >
+          <span>Regional</span>
         </v-btn>
       </v-speed-dial>
     </transition>
@@ -235,7 +245,8 @@ export default {
     bottom: true,
     left: false,
     transition: 'slide-y-reverse-transition',
-    showRegister: false
+    showRegister: false,
+    showFAB: false
   }),
   computed: {
     logoByScroll: function() {
@@ -279,6 +290,9 @@ export default {
 </script>
 
 <style>
+.v-speed-dial__list {
+  pointer-events: auto !important;
+}
 .v-parallax__content {
   padding-right: 0 !important;
   padding-left: 0 !important;
