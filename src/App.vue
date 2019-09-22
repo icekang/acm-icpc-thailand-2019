@@ -65,11 +65,30 @@
             dark
             id="register_btn"
             ref="register_btn"
-            href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
             style="margin: 0 !important"
+            @click="showRegisterOptions"
+            v-if="!showRegister"
           >
             <span><v-icon>create</v-icon> Register</span>
           </v-btn>
+          <transition name="fade">
+            <v-btn large round depressed color="#6b0000" dark v-if="showRegister" style="margin: 0 !important">
+              <span><v-icon>create</v-icon> Online</span>
+            </v-btn>
+          </transition>
+          <transition name="fade">
+            <v-btn
+              large
+              round
+              depressed
+              color="#6b0000"
+              dark
+              v-if="showRegister"
+              style="margin: 0 !important; margin-left: 5px !important"
+            >
+              <span><v-icon>create</v-icon> Regional</span>
+            </v-btn>
+          </transition>
         </div>
         <div class="content px-5 mb-2 pt-5"></div>
       </div>
@@ -79,7 +98,7 @@
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <!-- <v-btn
+      <v-btn
         fixed
         dark
         bottom
@@ -91,21 +110,7 @@
         href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
       >
         <span><v-icon>create</v-icon> Register</span>
-      </v-btn> -->
-      <v-speed-dial v-model="fab" right bottom fixed :open-on-hover="hover" transition="slide-y-reverse-transition">
-        <template v-slot:activator>
-          <v-btn v-model="fab" color="#6b0000" dark fab>
-            <v-icon>create</v-icon>
-            <v-icon>close</v-icon>
-          </v-btn>
-        </template>
-        <v-btn dark round small color="green" fab href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019">
-          <span>Online</span>
-        </v-btn>
-        <v-btn dark round small color="indigo" href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019">
-          <span>Regional</span>
-        </v-btn>
-      </v-speed-dial>
+      </v-btn>
     </transition>
     <div class="pt-5 pb-3" id="content-cu-eng">
       <img
@@ -181,7 +186,8 @@ export default {
     isVisible: false,
     drawer: false,
     fab: true,
-    hover: false
+    hover: false,
+    showRegister: false
   }),
   computed: {
     logoByScroll: function() {
@@ -195,6 +201,9 @@ export default {
     }
   },
   methods: {
+    showRegisterOptions: function() {
+      this.showRegister = !this.showRegister
+    },
     transparency: function() {
       if (this.offsetTop > 7) {
         return 0.7
