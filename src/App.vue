@@ -72,7 +72,18 @@
             <span><v-icon>create</v-icon> Register</span>
           </v-btn>
           <transition name="fade">
-            <v-btn large round depressed color="#6b0000" dark v-if="showRegister" style="margin: 0 !important">
+            <v-btn
+              large
+              round
+              depressed
+              color="#6b0000"
+              dark
+              v-if="showRegister"
+              style="margin: 0 !important"
+              ref="register_btn"
+              href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+              target="_blank"
+            >
               <span><v-icon>create</v-icon> Online</span>
             </v-btn>
           </transition>
@@ -85,6 +96,8 @@
               dark
               v-if="showRegister"
               style="margin: 0 !important; margin-left: 5px !important"
+              href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019"
+              target="_blank"
             >
               <span><v-icon>create</v-icon> Regional</span>
             </v-btn>
@@ -98,7 +111,7 @@
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <v-btn
+      <!-- <v-btn
         fixed
         dark
         bottom
@@ -110,7 +123,34 @@
         href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
       >
         <span><v-icon>create</v-icon> Register</span>
-      </v-btn>
+      </v-btn> -->
+      <v-speed-dial
+        v-model="fab"
+        :top="top"
+        :bottom="bottom"
+        :right="right"
+        :left="left"
+        :direction="direction"
+        :open-on-hover="hover"
+        :transition="transition"
+        fixed
+      >
+        <template v-slot:activator>
+          <v-btn v-model="fab" color="blue darken-2" dark fab>
+            <v-icon>account_circle</v-icon>
+            <v-icon>close</v-icon>
+          </v-btn>
+        </template>
+        <v-btn fab dark small color="green">
+          <v-icon>edit</v-icon>
+        </v-btn>
+        <v-btn fab dark small color="indigo">
+          <v-icon>add</v-icon>
+        </v-btn>
+        <v-btn fab dark small color="red">
+          <v-icon>delete</v-icon>
+        </v-btn>
+      </v-speed-dial>
     </transition>
     <div class="pt-5 pb-3" id="content-cu-eng">
       <img
@@ -185,8 +225,16 @@ export default {
     red_castle: red_castle,
     isVisible: false,
     drawer: false,
-    fab: true,
+    direction: 'top',
+    fab: false,
+    fling: false,
     hover: false,
+    tabs: null,
+    top: false,
+    right: true,
+    bottom: true,
+    left: false,
+    transition: 'slide-y-reverse-transition',
     showRegister: false
   }),
   computed: {
