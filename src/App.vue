@@ -12,7 +12,7 @@
       ></router-link>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon
-        style="background-color: rgba(0, 0, 0, 0) !important;"
+        :style="{ color: hamburgerColor, backgroundColor: hamburgerColorBg }"
         class="hamburger"
         dark
         @click.stop="drawer = !drawer"
@@ -235,7 +235,9 @@ export default {
     left: false,
     transition: 'slide-y-reverse-transition',
     showRegister: false,
-    showFAB: false
+    showFAB: false,
+    hamburgerColor: '#6b0000',
+    hamburgerColorBg: 'rgba(0,0,0,0)'
   }),
   computed: {
     logoByScroll: function() {
@@ -269,6 +271,11 @@ export default {
     },
     onScroll(e) {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+      if (this.offsetTop == 0) {
+        this.hamburgerColor = '#6b0000'
+      } else {
+        this.hamburgerColor = 'white'
+      }
       var div = this.$refs.register_btn.$el
       if (div) {
         var rect = div.getBoundingClientRect()
