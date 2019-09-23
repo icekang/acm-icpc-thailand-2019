@@ -10,7 +10,7 @@
         :tel="item.tel"
       ></ContactPart>
     </div>
-    <h1>Others</h1>
+    <h1>Other Hosts</h1>
     <div v-for="(item, index) in contacts_others" :key="'others-' + index">
       <ContactPartImg :name="item.name" :img="item.img"></ContactPartImg>
     </div>
