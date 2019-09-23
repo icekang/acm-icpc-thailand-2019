@@ -41,6 +41,21 @@
               <h2 class="text-shadow text-body">
                 Contest Date: 18 Oct 2019
               </h2>
+              <v-btn
+                large
+                round
+                depressed
+                color="#6b0000"
+                dark
+                style="margin: 0 !important; margin-top: 10px !important;"
+                ref="register_btn"
+                href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
+                target="_blank"
+                class="register_btn-text"
+                id="register_btn"
+              >
+                <span><v-icon class="register_btn-icon">create</v-icon> Online</span>
+              </v-btn>
             </div>
             <div class="partition mx-3" />
             <div>
@@ -53,58 +68,23 @@
               <h2 class="text-shadow text-body">
                 Contest Date: 02 Nov - 03 Nov 2019
               </h2>
+              <v-btn
+                large
+                round
+                depressed
+                color="#6b0000"
+                dark
+                style="margin: 0 !important; margin-top: 10px !important;"
+                href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019"
+                target="_blank"
+                class="register_btn-text"
+              >
+                <span><v-icon class="register_btn-icon">create</v-icon> Regional</span>
+              </v-btn>
             </div>
           </div>
         </transition>
-        <div class="text-xs pt-3 px-5 register">
-          <v-btn
-            large
-            round
-            depressed
-            color="#6b0000"
-            dark
-            id="register_btn"
-            ref="register_btn"
-            style="margin: 0 !important"
-            @click="showRegisterOptions"
-            v-if="!showRegister"
-          >
-            <span><v-icon>create</v-icon> Register</span>
-          </v-btn>
-          <transition name="fade">
-            <v-btn
-              large
-              round
-              depressed
-              color="#6b0000"
-              dark
-              v-if="showRegister"
-              style="margin: 0 !important"
-              ref="register_btn"
-              href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
-              target="_blank"
-              class="register_btn-text"
-            >
-              <span><v-icon class="register_btn-icon">create</v-icon> Online</span>
-            </v-btn>
-          </transition>
-          <transition name="fade">
-            <v-btn
-              large
-              round
-              depressed
-              color="#6b0000"
-              dark
-              v-if="showRegister"
-              style="margin: 0 !important; margin-left: 5px !important"
-              href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019"
-              target="_blank"
-              class="register_btn-text"
-            >
-              <span><v-icon class="register_btn-icon">create</v-icon> Regional</span>
-            </v-btn>
-          </transition>
-        </div>
+        <div class="text-xs pt-3 px-5 register"></div>
         <div class="content px-5 mb-2 pt-5"></div>
       </div>
       <div class="shadow" style="z-index: 5;"></div>
