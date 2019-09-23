@@ -7,7 +7,7 @@
         style="display: block; margin-left: auto; margin-right: auto; max-height: 200px; max-width: 50vw;"
       />
     </div>
-    <h2 class="my-display-1 pt-4">{{ name }}</h2>
+    <h2 class="my-display-1 pt-4" style="text-align: center;">{{ name }}</h2>
   </div>
 </template>
 <script>

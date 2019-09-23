@@ -11,7 +11,7 @@
       ></ContactPart>
     </div>
     <h1>Other Hosts</h1>
-    <div v-for="(item, index) in contacts_others" :key="'others-' + index">
+    <div v-for="(item, index) in contacts_others" :key="'others-' + index" style="max-width:700px;">
       <ContactPartImg :name="item.name" :img="item.img"></ContactPartImg>
     </div>
   </div>
