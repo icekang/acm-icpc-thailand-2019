@@ -83,8 +83,9 @@
               ref="register_btn"
               href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
               target="_blank"
+              class="register_btn-text"
             >
-              <span><v-icon>create</v-icon> Online</span>
+              <span><v-icon class="register_btn-icon">create</v-icon> Online</span>
             </v-btn>
           </transition>
           <transition name="fade">
@@ -98,8 +99,9 @@
               style="margin: 0 !important; margin-left: 5px !important"
               href="https://icpc.baylor.edu/regionals/finder/AsiaBangkok-2019"
               target="_blank"
+              class="register_btn-text"
             >
-              <span><v-icon>create</v-icon> Regional</span>
+              <span><v-icon class="register_btn-icon">create</v-icon> Regional</span>
             </v-btn>
           </transition>
         </div>
@@ -111,19 +113,6 @@
       <router-view :key="$route.fullPath"></router-view>
     </transition>
     <transition name="slide-fade">
-      <!-- <v-btn
-        fixed
-        dark
-        bottom
-        right
-        round
-        large
-        color="#6b0000"
-        v-if="show_float_btn"
-        href="https://icpc.baylor.edu/regionals/finder/AsiaBankOnline-2019"
-      >
-        <span><v-icon>create</v-icon> Register</span>
-      </v-btn> -->
       <v-speed-dial
         v-if="show_float_btn"
         v-model="fab"
@@ -137,7 +126,7 @@
         fixed
       >
         <template v-slot:activator>
-          <v-btn v-model="fab" dark round large color="#6b0000" @click="showFAB = !showFAB">
+          <v-btn v-model="fab" dark round large color="#6b0000" @click="updateShowFAB">
             <span v-if="!showFAB"><v-icon>create</v-icon> Register</span>
             <v-icon v-if="showFAB">close</v-icon>
           </v-btn>
@@ -260,6 +249,14 @@ export default {
     }
   },
   methods: {
+    updateShowFAB: function() {
+      let speedDialList = document.getElementsByClassName('v-speed-dial__list')[0].innerHTML
+      if (speedDialList) {
+        this.showFAB = false
+      } else {
+        this.showFAB = true
+      }
+    },
     showRegisterOptions: function() {
       this.showRegister = !this.showRegister
     },
@@ -314,12 +311,22 @@ export default {
   .not-hamburger {
     display: block !important;
   }
+  .register_btn-icon {
+    display: inline-flex !important;
+  }
 }
 @media screen and (max-width: 700px) {
   .hamburger {
     display: block !important;
   }
   .not-hamburger {
+    display: none !important;
+  }
+  .register_btn-text {
+    max-width: 36px !important;
+    font-size: 13px !important;
+  }
+  .register_btn-icon {
     display: none !important;
   }
 }
