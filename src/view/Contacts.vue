@@ -12,13 +12,7 @@
     </div>
     <h1>Others</h1>
     <div v-for="(item, index) in contacts_others" :key="'others-' + index">
-      <ContactPartImg
-        :name="item.name"
-        :img="item.img"
-        :contact_person="item.contact_person"
-        :email="item.email"
-        :tel="item.tel"
-      ></ContactPartImg>
+      <ContactPartImg :name="item.name" :img="item.img"></ContactPartImg>
     </div>
   </div>
 </template>
@@ -48,80 +42,47 @@ export default {
     contacts_others: [
       {
         name: 'Prince of Songkla University Hat Yai Campus',
-        img: 'psu-2-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'psu-2-logo.png'
       },
       {
         name: "King Mongkut's University of Technology North Bangkok",
-        img: 'kmutnb-logo.jpg',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'kmutnb-logo.jpg'
       },
       {
         name: 'Kasetsart University Bangkok',
-        img: 'ku-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'ku-logo.png'
       },
       {
         name: 'Khonkaen University',
-        img: 'kku-logo.gif',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'kku-logo.gif'
       },
       {
         name: 'Prince of Songkla University Phuket Campus',
-        img: 'psu-phuket-2-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'psu-phuket-2-logo.png'
       },
       {
         name: 'Chiangmai University',
-        img: 'cmu-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'cmu-logo.png'
       },
       {
         name: 'University of Phayao',
-        img: 'up-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'up-logo.png'
       },
       {
         name: 'Mahidol University',
-        img: 'mu-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'mu-logo.png'
       },
       {
         name: 'Mahasarakham University',
-        img: 'msu-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'msu-logo.png'
       },
       {
         name: 'Burapha University',
-        img: 'bu-logo.jpg',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'bu-logo.jpg'
       },
       {
         name: 'Kasetsart University Sriracha Campus',
-        img: 'ku-src-logo.png',
-        contact_person: 'Athasit Surarerks',
-        email: 'athasit@cp.eng.chula.ac.th',
-        tel: '02-218-6957'
+        img: 'ku-src-logo.png'
       }
     ]
   })

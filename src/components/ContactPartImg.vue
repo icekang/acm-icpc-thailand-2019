@@ -8,7 +8,6 @@
       />
     </div>
     <h2 class="my-display-1 pt-4">{{ name }}</h2>
-    <p>{{ contact_person }}<br />{{ email }}<br />{{ tel }}</p>
   </div>
 </template>
 <script>
@@ -17,10 +16,7 @@ export default {
   name: 'ContactPart',
   props: {
     name: String,
-    img: String,
-    contact_person: String,
-    email: String,
-    tel: String
+    img: String
   },
   data: () => ({}),
   computed: {},
